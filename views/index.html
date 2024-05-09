@@ -1,12 +1,12 @@
 <!--Main home page for the restaurant-->
 <include href="views/header.html"></include>
 
-<body class="container-fluid d-flex flex-column align-items-center">
+<body class="container-fluid d-flex flex-column align-items-center p-0">
     <header class="container-fluid">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Logo</a>
+                    <a class="navbar-brand" href="#">CTRLFreaks</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -24,10 +24,12 @@
                                 </li>
                             </ul>
 
-                            <div class="d-flex flex-row float-right">
-                                <a class="nav-link order-button" href="#">Order</a>
-                                <a class="nav-link" href="#">User</a>
-                                <a class="nav-link" href="#">Cart</a>
+                            <div class="order-cart-container d-flex flex-row float-right align-items-center">
+                                <div class="order-button d-flex align-items-center justify-content-center">
+                                    <a class="nav-link" href="#">Order</a>
+                                </div>
+                                <img src="images/iconmonstr-user-19-240.png">
+                                <img src="images/iconmonstr-shopping-cart-22-240.png">
                             </div>
                         </div>
                     </div>
@@ -37,13 +39,16 @@
     </header>
     <main role="main" class="container d-flex flex-column align-items-center justify-content-center">
         <div class="main-text-container text-center w-50 d-flex flex-column align-items-center justify-content-center">
-            <h3>LOREL IPSUM</h3>
-            <p>text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text
-                text text text text text text text text text text text text text text text text text
-                text text text text text text text text text text text </p>
-            <div class="order-button">
-                <p>Order</p>
+            <h3>CTRLFreaks Restaurant</h3>
+            <p>Welcome to CTRLFreaks, where every bite is a taste of tech-infused indulgence!
+                Dive into a world where wings and burgers meet innovation,
+                crafting culinary marvels that cater to your cravings and your geeky side.
+                Whether you're searching for the perfect balance of spice in our signature wings
+                or craving a burger that pushes the boundaries of flavor, CTRLFreaks is your ultimate
+                destination. Join us for a dining experience where every dish is a celebration of
+                bold flavors and culinary creativity, served with a side of tech-savvy charm.</p>
+            <div class="order-button d-flex align-items-center justify-content-center">
+                <a class="nav-link" href="#">Order</a>
             </div>
         </div>
     </main>
@@ -51,12 +56,12 @@
     <footer class="container-fluid">
         <div class="container footer-container d-flex flex-column flex-md-row justify-content-between align-items-center p-2">
             <div class="socials d-flex flex-row">
-                <div class="socials-row d-flex flex-row gap-3">
-                    <div>Logo</div>
-                    <p>IG</p>
-                    <p>Snapchat</p>
-                    <p>Gmail</p>
-                    <p>Facebook</p>
+                <div class="socials-row d-flex flex-row">
+                    <div>CTRLFreaks</div>
+                    <img src="images/iconmonstr-facebook-messenger-3-240.png">
+                    <img src="images/iconmonstr-gmail-3-240.png">
+                    <img src="images/iconmonstr-instagram-13-240.png">
+                    <img src="images/iconmonstr-snapchat-3-240.png">
                 </div>
             </div>
 
