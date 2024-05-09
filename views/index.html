@@ -35,12 +35,39 @@
             </nav>
         </div>
     </header>
-    <main role="main" class="container">
-
+    <main role="main" class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="main-text-container text-center w-50 d-flex flex-column align-items-center justify-content-center">
+            <h3>LOREL IPSUM</h3>
+            <p>text text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text
+                text text text text text text text text text text text text text text text text text
+                text text text text text text text text text text text </p>
+            <div class="order-button">
+                <p>Order</p>
+            </div>
+        </div>
     </main>
 
-    <footer>
+    <footer class="container-fluid">
+        <div class="container footer-container d-flex flex-column flex-md-row justify-content-between align-items-center p-2">
+            <div class="socials d-flex flex-row">
+                <div class="socials-row d-flex flex-row gap-3">
+                    <div>Logo</div>
+                    <p>IG</p>
+                    <p>Snapchat</p>
+                    <p>Gmail</p>
+                    <p>Facebook</p>
+                </div>
+            </div>
 
+            <div class="offers-deals">
+                <p>Offers and Special Deals Notifications</p>
+                <form class="offers-form" method="POST" action="#">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                    <button type="submit" class="offers-subscribe-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
