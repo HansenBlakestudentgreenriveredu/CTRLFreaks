@@ -18,5 +18,18 @@ $f3->route('GET /', function() {
     $view = new Template();
     echo $view->render('views/index.html');
 });
+// Define a default route
+$f3->route('GET /home', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/index.html');
+});
+
+// route to menu page
+$f3->route('GET /menu', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/menu.html');
+});
 
 $f3->run();
