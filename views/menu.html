@@ -1,4 +1,4 @@
-<!--Main home page for the restaurant-->
+
 <include href="views/header.html"></include>
 
 
@@ -38,31 +38,43 @@
         </nav>
     </div>
 </header>
+
+<div class="container">
+    <ul class="nav anchorlinks">
+        <li class="nav-item"><a class="nav-link" href="#breakfast">Breakfast</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lunch">Lunch</a></li>
+        <li class="nav-item"><a class="nav-link" href="#dinner">Dinner</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sides">Sides</a></li>
+        <li class="nav-item"><a class="nav-link" href="#beverages">Beverages</a></li>
+    </ul>
+</div>
+
+
 <div class="container-fluid">
     <div class="menu-container">
         <h1 class="menu-title">Menu</h1>
 
         <!-- Breakfast Items -->
         <div class="menu-category">
-            <h2 class="category-title accent-color">Breakfast</h2>
+            <h2 id="breakfast" class="category-title accent-color">Breakfast</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Eggs Benedict" class="menu-item-img">
+                        <img src="images/eggs-benedict.jpg" alt="Eggs Benedict" class="menu-item-img">
                         <h3 class="menu-item-title">Eggs Benedict</h3>
                         <p class="menu-item-description">Poached eggs, Canadian bacon, English muffin, hollandaise sauce.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Pancakes" class="menu-item-img">
+                        <img src="images/oatmeal-pancakes.jpg" alt="Pancakes" class="menu-item-img">
                         <h3 class="menu-item-title">Pancakes</h3>
                         <p class="menu-item-description">Fluffy pancakes served with maple syrup and butter.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Omelette" class="menu-item-img">
+                        <img src="images/omlette.webp" alt="Omelette" class="menu-item-img">
                         <h3 class="menu-item-title">Omelette</h3>
                         <p class="menu-item-description">Customizable omelette with choice of fillings: cheese, vegetables, ham, etc.</p>
                     </div>
@@ -73,25 +85,25 @@
 
         <!-- Lunch Items -->
         <div class="menu-category">
-            <h2 class="category-title accent-color">Lunch</h2>
+            <h2 id="lunch" class="category-title accent-color">Lunch</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Cheeseburger" class="menu-item-img">
+                        <img src="images/cheeseburger.webp" alt="Cheeseburger" class="menu-item-img">
                         <h3 class="menu-item-title">Cheeseburger</h3>
                         <p class="menu-item-description">Grilled beef patty, cheese, lettuce, tomato, onion, pickles, brioche bun.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Caesar Salad" class="menu-item-img">
+                        <img src="images/caesar-salad-1-12.jpg" alt="Caesar Salad" class="menu-item-img">
                         <h3 class="menu-item-title">Caesar Salad</h3>
                         <p class="menu-item-description">Crisp romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Club Sandwich" class="menu-item-img">
+                        <img src="images/chicken-club-sandwich-ft.jpg" alt="Club Sandwich" class="menu-item-img">
                         <h3 class="menu-item-title">Club Sandwich</h3>
                         <p class="menu-item-description">Turkey, bacon, lettuce, tomato, mayonnaise, toasted bread.</p>
                     </div>
@@ -102,25 +114,25 @@
 
         <!-- Dinner Items -->
         <div class="menu-category">
-            <h2 class="category-title accent-color">Dinner</h2>
+            <h2 id="dinner" class="category-title accent-color">Dinner</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Grilled Salmon" class="menu-item-img">
+                        <img src="images/grilled salmon.jpeg" alt="Grilled Salmon" class="menu-item-img">
                         <h3 class="menu-item-title">Grilled Salmon</h3>
                         <p class="menu-item-description">Fresh Atlantic salmon, lemon herb butter, seasonal vegetables, rice pilaf.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Ribeye Steak" class="menu-item-img">
+                        <img src="images/ribeye-steak-recipe-500x500.jpg" alt="Ribeye Steak" class="menu-item-img">
                         <h3 class="menu-item-title">Ribeye Steak</h3>
                         <p class="menu-item-description">Juicy ribeye steak cooked to perfection, served with mashed potatoes.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="BBQ Ribs" class="menu-item-img">
+                        <img src="images/steak.jpg" alt="BBQ Ribs" class="menu-item-img">
                         <h3 class="menu-item-title">BBQ Ribs</h3>
                         <p class="menu-item-description">Tender pork ribs smothered in BBQ sauce, served with coleslaw.</p>
                     </div>
@@ -131,25 +143,25 @@
 
         <!-- Sides Items -->
         <div class="menu-category">
-            <h2 class="category-title accent-color">Sides</h2>
+            <h2 id="sides" class="category-title accent-color">Sides</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="French Fries" class="menu-item-img">
+                        <img src="images/Frozen-French-Fries.jpeg" alt="French Fries" class="menu-item-img">
                         <h3 class="menu-item-title">French Fries</h3>
                         <p class="menu-item-description">Crispy golden fries served with ketchup.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Onion Rings" class="menu-item-img">
+                        <img src="images/onion rings.jpg" alt="Onion Rings" class="menu-item-img">
                         <h3 class="menu-item-title">Onion Rings</h3>
                         <p class="menu-item-description">Battered and deep-fried onion rings, served with dipping sauce.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Mashed Potatoes" class="menu-item-img">
+                        <img src="images/mashed-potatoes.jpg" alt="Mashed Potatoes" class="menu-item-img">
                         <h3 class="menu-item-title">Mashed Potatoes</h3>
                         <p class="menu-item-description">Creamy mashed potatoes with butter and garlic.</p>
                     </div>
@@ -160,25 +172,25 @@
 
         <!-- Beverages Items -->
         <div class="menu-category">
-            <h2 class="category-title accent-color">Beverages</h2>
+            <h2 id="beverages" class="category-title accent-color">Beverages</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Soda" class="menu-item-img">
+                        <img src="images/soda.jpg" alt="Soda" class="menu-item-img">
                         <h3 class="menu-item-title">Soda</h3>
                         <p class="menu-item-description">Coca-Cola, Pepsi, Sprite, etc.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Iced Tea" class="menu-item-img">
+                        <img src="images/ice tea.jpg" alt="Iced Tea" class="menu-item-img">
                         <h3 class="menu-item-title">Iced Tea</h3>
                         <p class="menu-item-description">Refreshing iced tea, available in sweetened or unsweetened.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="menu-item">
-                        <img src="https://via.placeholder.com/150" alt="Coffee" class="menu-item-img">
+                        <img src="images/coffee.jpg" alt="Coffee" class="menu-item-img">
                         <h3 class="menu-item-title">Coffee</h3>
                         <p class="menu-item-description">Freshly brewed coffee, available in regular or decaf.</p>
                     </div>
