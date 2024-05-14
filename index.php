@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 
 // Require the autoload file
 require_once ('vendor/autoload.php');
+require_once ('model/data-layer.php');
+require_once ('model/validate.php');
 
 // Instantiate the F3 Base class
 $f3 = Base::instance();
@@ -15,6 +17,19 @@ $f3->route('GET /', function() {
     // Render a view page
     $view = new Template();
     echo $view->render('views/index.html');
+});
+// home route
+$f3->route('GET /home', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/index.html');
+});
+
+// route to menu page
+$f3->route('GET /menu', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/menu.html');
 });
 
 $f3->run();
