@@ -1,0 +1,114 @@
+<!--
+    File: contact.html
+    Author: Blake, Vlad, Tilak
+    Description: Contact page
+-->
+
+<include href="views/header.html"></include>
+
+<body class="container-fluid d-flex flex-column align-items-center p-0 index">
+
+<!--Header-->
+<header class="container-fluid">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home">CTRLFreaks</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="d-flex justify-content-between w-100">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="order-cart-container d-flex flex-row float-right align-items-center">
+                            <div class="order-button d-flex align-items-center justify-content-center">
+                                <a class="nav-link" href="#">Order</a>
+                            </div>
+                            <img src="images/iconmonstr-user-19-240.png">
+                            <img src="images/iconmonstr-shopping-cart-22-240.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!--main here-->
+<main role="main" class="container d-flex flex-column align-items-center justify-content-center">
+    <div class="main-text-container text-center w-50 d-flex flex-column align-items-center justify-content-center">
+        <h3>Contact</h3>
+
+        <!-- Directions -->
+        <p>Please feel free to fill out this form and we will contact you shortly</p>
+
+        <!-- Collect Information about customer-->
+        <h4>Contact Information</h4>
+
+        <form action="#" method="post" class="form-horizontal">
+
+            <!-- get first name -->
+            <div class="form-group">
+                <label for="firstName" class="col-sm-4 control-label">First Name</label>
+                <div class="col-sm-4"><input class="form-control" type="text"
+                                             name="firstName" id="firstName" ></div>
+            </div>
+            <br>
+
+            <!-- get last name -->
+            <div class="form-group">
+                <label for="lastName" class="col-sm-4 control-label">Last Name</label>
+                <div class="col-sm-4"><input class="form-control" type="text"
+                                             name="lastName" id="lastName" ></div>
+            </div>
+            <br>
+
+            <!-- get email -->
+            <div class="form-group">
+                <label for="email" class="col-sm-4 control-label">Email</label>
+                <div class="col-sm-4"><input class="form-control" type="text"
+                                             name="email" id="email" ></div>
+            </div>
+            <br>
+
+            <!-- get phone number -->
+            <div class="form-group">
+                <label for="phoneNumber" class="col-sm-4 control-label">Phone</label>
+                <div class="col-sm-4"><input class="form-control" type="text"
+                                             name="phoneNumber" id="phoneNumber" ></div>
+            </div>
+            <br>
+
+            <h3>Tell us about your experience</h3>
+
+            <!-- get comment -->
+            <div class="form-group">
+                <label for="comment" class="col-sm-4 control-label">Comment</label>
+                <div class="col-sm-4"><input class="form-control" type="text"
+                                             name="comment" id="comment" ></div>
+            </div>
+            <br>
+
+            <!-- submit button -->
+            <div class = "row">
+                <div class = "col-12">
+                    <nav>
+                        <a type ="button" class="btn btn-primary"
+                           href="">Submit</a>
+                    </nav>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
