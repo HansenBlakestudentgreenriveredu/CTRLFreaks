@@ -32,4 +32,11 @@ $f3->route('GET /menu', function() {
     echo $view->render('views/menu.html');
 });
 
+// route to summary page
+$f3->route('GET /orderSummary', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/orderSummary.html');
+});
+
 $f3->run();
