@@ -1,4 +1,8 @@
 <?php
+
+//Tilak C, Blake H, Vlad O
+//Index controller for the CTRLFreaks webpage
+
 // Turn on error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);

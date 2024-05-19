@@ -1,3 +1,7 @@
+/*Vlad O, Tilak C, Blake H*/
+/*CSS style file for the CTRLFreaks webpage*/
+/*File: CSS.css*/
+
 /*Sets default font size and weight*/
 * {
     font-weight: bold;
@@ -13,7 +17,6 @@ header {
 /*Body styles*/
 .index {
     height: 100vh;
-    width: 100vh;
     background-image: url("../images/pexels-polina-tankilevitch-4109136.jpg");
     background-color: rgba(255,255,255,0.7);
     background-blend-mode: lighten;
