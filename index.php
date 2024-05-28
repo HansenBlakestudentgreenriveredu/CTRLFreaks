@@ -38,6 +38,11 @@ $f3->route('GET /orderSummary', function() {
     echo $view->render('views/orderSummary.html');
 });
 
-
+// route to contact page
+$f3->route('GET /contact', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/contact.html');
+});
 
 $f3->run();
