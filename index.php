@@ -45,4 +45,18 @@ $f3->route('GET /contact', function() {
     echo $view->render('views/contact.html');
 });
 
+// route to user page
+$f3->route('GET /user', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/user.html');
+});
+
+// route to user page
+$f3->route('GET /cart', function() {
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/cart.html');
+});
+
 $f3->run();
