@@ -1,17 +1,12 @@
 {
-<<<<<<< HEAD
   "name": "CTRLFreaks/328/diner",
-=======
-  "name": "bhansen.greenriverdev.com/328/CTRLFreaks/",
->>>>>>> c05d37762ec2c929f2fe1b299cc55834437a561a
   "authors": [
     {
       "name": "Blake Hansen",
       "email": "hansen.blake@student.greenriver.edu"
     }
   ],
-  "require":
-  {
+  "require": {
     "bcosca/fatfree-core": "dev-master"
   }
 }

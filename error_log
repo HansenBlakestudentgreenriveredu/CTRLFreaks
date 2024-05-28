@@ -64,3 +64,43 @@
 [13-May-2024 05:29:24 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:35] Base->run()
 [13-May-2024 05:29:32 UTC] HTTP 404 (GET /images/favicon_io/site.webmanifest)
 [13-May-2024 05:29:32 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:35] Base->run()
+[17-May-2024 20:20:41 UTC] require(lib/base.php): Failed to open stream: No such file or directory
+[17-May-2024 20:20:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] 
+[17-May-2024 20:20:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] Base->{closure}()
+[17-May-2024 20:20:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] require()
+[17-May-2024 20:20:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:133] Base->run()
+[17-May-2024 20:20:58 UTC] require(lib/base.php): Failed to open stream: No such file or directory
+[17-May-2024 20:20:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] 
+[17-May-2024 20:20:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] Base->{closure}()
+[17-May-2024 20:20:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:26] require()
+[17-May-2024 20:20:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:133] Base->run()
+[17-May-2024 21:23:55 UTC] Undefined variable $menuItems
+[17-May-2024 21:23:55 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[17-May-2024 21:23:55 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[17-May-2024 21:23:55 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[17-May-2024 21:24:37 UTC] Undefined variable $menuItems
+[17-May-2024 21:24:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[17-May-2024 21:24:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[17-May-2024 21:24:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[18-May-2024 16:23:08 UTC] Undefined variable $menuItems
+[18-May-2024 16:23:08 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[18-May-2024 16:23:08 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[18-May-2024 16:23:08 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[19-May-2024 06:40:22 UTC] Undefined variable $menuItems
+[19-May-2024 06:40:22 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[19-May-2024 06:40:22 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[19-May-2024 06:40:22 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[19-May-2024 16:47:35 UTC] Undefined variable $menuItems
+[19-May-2024 16:47:35 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[19-May-2024 16:47:35 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[19-May-2024 16:47:35 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[21-May-2024 00:33:37 UTC] Undefined variable $menuItems
+[21-May-2024 00:33:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[21-May-2024 00:33:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[21-May-2024 00:33:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[21-May-2024 00:34:40 UTC] Undefined variable $menuItems
+[21-May-2024 00:34:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] 
+[21-May-2024 00:34:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Base->{closure}()
+[21-May-2024 00:34:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
+[21-May-2024 16:48:20 UTC] HTTP 404 (GET /contact)
+[21-May-2024 16:48:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Base->run()
