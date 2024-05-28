@@ -1,3 +1,7 @@
+/*Vlad O, Tilak C, Blake H*/
+/*Javascript script file for the CTRLFreaks webpage*/
+// File: script.js
+
 
     // Get the button
     var goToTopBtn = document.getElementById("goToTopBtn");
