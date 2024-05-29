@@ -74,8 +74,6 @@ main {
 footer {
     border-top: #a9a9a9 1px solid;
     background-color: #f6f7f8;
-    position: relative;
-    bottom: 0;
 }
 
 /*styles for the social icons*/
@@ -257,6 +255,7 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    height: 100%;
     margin: 20px;
     max-width: 600px;
 }
@@ -279,16 +278,12 @@ footer {
 }
 
 .cart-container {
-    margin: 20px 0;
-    height: 1500px;
+    height: 100%;
 }
 
 .main-cart-container {
     background-color: rgb(246, 247, 248);
     height: 100%;
-    grid-gap: 100px;
-    border-radius: 10px;
-    padding: 20px;
 }
 
 .checkout-container {
@@ -296,16 +291,4 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 90%;
-    padding: 30px;
-    grid-gap: 30px;
-}
-
-.checkout-submit-button {
-    background-color: rgba(255,165,0);
-    color: black;
-    border: none;
-    font-weight: bold;
-    height: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

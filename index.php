@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 // Autoload dependencies
 require_once 'vendor/autoload.php';
 
-// Include data layer and validation files if needed
+// Include data layer and validation files
 require_once 'model/data-layer.php';
 require_once 'model/validate.php';
 
@@ -28,7 +28,13 @@ $f3->route('GET /home', function() {
 });
 
 // Route to menu page
-$f3->route('GET /menu', function() {
+$f3->route('GET /menu', function($f3) {
+    $f3->set('menuItems.breakfast', getBreakfastItems());
+    $f3->set('menuItems.lunch', getLunchItems());
+    $f3->set('menuItems.dinner', getDinnerItems());
+    $f3->set('menuItems.sides', getSides());
+    $f3->set('menuItems.beverages', getBeverages());
+
     $view = new Template();
     echo $view->render('views/menu.html');
 });
@@ -45,23 +51,18 @@ $f3->route('GET /contact', function() {
     echo $view->render('views/contact.html');
 });
 
-
-// route to user page
+// Route to user page
 $f3->route('GET /user', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/user.html');
 });
 
-// route to user page
+// Route to cart page
 $f3->route('GET /cart', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/cart.html');
 });
 
-$f3->run();
-
 // Run the F3 framework
 $f3->run();
-
+?>
