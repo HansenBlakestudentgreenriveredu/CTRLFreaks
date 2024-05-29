@@ -104,3 +104,43 @@
 [21-May-2024 00:34:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:44] Base->run()
 [21-May-2024 16:48:20 UTC] HTTP 404 (GET /contact)
 [21-May-2024 16:48:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Base->run()
+[28-May-2024 18:22:44 UTC] Undefined variable $menuItems
+[28-May-2024 18:22:44 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:22:44 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:22:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:33] Preview->render()
+[28-May-2024 18:22:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:49] Base->run()
+[28-May-2024 18:26:11 UTC] Undefined variable $menuItems
+[28-May-2024 18:26:11 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:26:11 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:26:11 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:33] Preview->render()
+[28-May-2024 18:26:11 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:49] Base->run()
+[28-May-2024 18:30:01 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:01 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:01 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:01 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:01 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()
+[28-May-2024 18:30:03 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:03 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:03 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:03 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:03 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()
+[28-May-2024 18:30:04 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:04 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:04 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:04 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:04 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()
+[28-May-2024 18:30:05 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:05 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:05 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:05 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:05 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()
+[28-May-2024 18:30:07 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:07 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:07 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:07 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:07 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()
+[28-May-2024 18:30:10 UTC] Undefined variable $menuItems
+[28-May-2024 18:30:10 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] 
+[28-May-2024 18:30:10 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:63] Base->{closure}()
+[28-May-2024 18:30:10 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:63] Preview->render()
+[28-May-2024 18:30:10 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:79] Base->run()

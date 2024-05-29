@@ -1,49 +1,50 @@
 <?php
 
-//Tilak C, Blake H, Vlad O
-//Index controller for the CTRLFreaks webpage
-
 // Turn on error reporting
 ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-// Require the autoload file
-require_once ('vendor/autoload.php');
-require_once ('model/data-layer.php');
-require_once ('model/validate.php');
+
+// Autoload dependencies
+require_once 'vendor/autoload.php';
+
+// Include data layer and validation files if needed
+require_once 'model/data-layer.php';
+require_once 'model/validate.php';
+
 // Instantiate the F3 Base class
 $f3 = Base::instance();
+
 // Define a default route
 $f3->route('GET /', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/index.html');
 });
-// home route
+
+// Home route
 $f3->route('GET /home', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/index.html');
 });
-// route to menu page
+
+// Route to menu page
 $f3->route('GET /menu', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/menu.html');
 });
 
-// route to summary page
+// Route to summary page
 $f3->route('GET /orderSummary', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/orderSummary.html');
 });
 
-// route to contact page
+// Route to contact page
 $f3->route('GET /contact', function() {
-    // Render a view page
     $view = new Template();
     echo $view->render('views/contact.html');
 });
+
 
 // route to user page
 $f3->route('GET /user', function() {
@@ -60,3 +61,7 @@ $f3->route('GET /cart', function() {
 });
 
 $f3->run();
+
+// Run the F3 framework
+$f3->run();
+

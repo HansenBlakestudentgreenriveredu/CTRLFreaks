@@ -53,93 +53,93 @@
     </ul>
 </div>
 
-<div class="container-fluid">
-    <div class="menu-container">
-        <h1 class="menu-title">Menu</h1>
+<!--<div class="container-fluid">-->
+<!--    <div class="menu-container">-->
+<!--        <h1 class="menu-title">Menu</h1>-->
 
-        <!-- Breakfast Items -->
-        <div class="menu-category">
-            <h2 id="breakfast" class="category-title accent-color">Breakfast</h2>
-            <div class="row">
-                <repeat group="{{ @menuItems.breakfast }}" value="{{ @item }}">
-                    <div class="col-md-4">
-                        <div class="menu-item">
-                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
-                            <h3 class="menu-item-title">{{ @item.title }}</h3>
-                            <p class="menu-item-description">{{ @item.description }}</p>
-                        </div>
-                    </div>
-                </repeat>
-            </div>
-        </div>
+<!--        &lt;!&ndash; Breakfast Items &ndash;&gt;-->
+<!--        <div class="menu-category">-->
+<!--            <h2 id="breakfast" class="category-title accent-color">Breakfast</h2>-->
+<!--            <div class="row">-->
+<!--                <repeat group="{{ @menuItems.breakfast }}" value="{{ @item }}">-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="menu-item">-->
+<!--                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">-->
+<!--                            <h3 class="menu-item-title">{{ @item.title }}</h3>-->
+<!--                            <p class="menu-item-description">{{ @item.description }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </repeat>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!-- Lunch Items -->
-        <div class="menu-category">
-            <h2 id="lunch" class="category-title accent-color">Lunch</h2>
-            <div class="row">
-                <repeat group="{{ @menuItems.lunch }}" value="{{ @item }}">
-                    <div class="col-md-4">
-                        <div class="menu-item">
-                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
-                            <h3 class="menu-item-title">{{ @item.title }}</h3>
-                            <p class="menu-item-description">{{ @item.description }}</p>
-                        </div>
-                    </div>
-                </repeat>
-            </div>
-        </div>
+<!--        &lt;!&ndash; Lunch Items &ndash;&gt;-->
+<!--        <div class="menu-category">-->
+<!--            <h2 id="lunch" class="category-title accent-color">Lunch</h2>-->
+<!--            <div class="row">-->
+<!--                <repeat group="{{ @menuItems.lunch }}" value="{{ @item }}">-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="menu-item">-->
+<!--                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">-->
+<!--                            <h3 class="menu-item-title">{{ @item.title }}</h3>-->
+<!--                            <p class="menu-item-description">{{ @item.description }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </repeat>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!-- Dinner Items -->
-        <div class="menu-category">
-            <h2 id="dinner" class="category-title accent-color">Dinner</h2>
-            <div class="row">
-                <repeat group="{{ @menuItems.dinner }}" value="{{ @item }}">
-                    <div class="col-md-4">
-                        <div class="menu-item">
-                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
-                            <h3 class="menu-item-title">{{ @item.title }}</h3>
-                            <p class="menu-item-description">{{ @item.description }}</p>
-                        </div>
-                    </div>
-                </repeat>
-            </div>
-            <button class="" onclick="topFunction()" id="goToTopBtn1" title="Go to top">&#8593;</button>
-        </div>
+<!--        &lt;!&ndash; Dinner Items &ndash;&gt;-->
+<!--        <div class="menu-category">-->
+<!--            <h2 id="dinner" class="category-title accent-color">Dinner</h2>-->
+<!--            <div class="row">-->
+<!--                <repeat group="{{ @menuItems.dinner }}" value="{{ @item }}">-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="menu-item">-->
+<!--                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">-->
+<!--                            <h3 class="menu-item-title">{{ @item.title }}</h3>-->
+<!--                            <p class="menu-item-description">{{ @item.description }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </repeat>-->
+<!--            </div>-->
+<!--            <button class="" onclick="topFunction()" id="goToTopBtn1" title="Go to top">&#8593;</button>-->
+<!--        </div>-->
 
-        <!-- Sides Items -->
-        <div class="menu-category">
-            <h2 id="sides" class="category-title accent-color">Sides</h2>
-            <div class="row">
-                <repeat group="{{ @menuItems.sides }}" value="{{ @item }}">
-                    <div class="col-md-4">
-                        <div class="menu-item">
-                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
-                            <h3 class="menu-item-title">{{ @item.title }}</h3>
-                            <p class="menu-item-description">{{ @item.description }}</p>
-                        </div>
-                    </div>
-                </repeat>
-            </div>
-        </div>
+<!--        &lt;!&ndash; Sides Items &ndash;&gt;-->
+<!--        <div class="menu-category">-->
+<!--            <h2 id="sides" class="category-title accent-color">Sides</h2>-->
+<!--            <div class="row">-->
+<!--                <repeat group="{{ @menuItems.sides }}" value="{{ @item }}">-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="menu-item">-->
+<!--                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">-->
+<!--                            <h3 class="menu-item-title">{{ @item.title }}</h3>-->
+<!--                            <p class="menu-item-description">{{ @item.description }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </repeat>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <!-- Beverages Items -->
-        <div class="menu-category">
-            <h2 id="beverages" class="category-title accent-color">Beverages</h2>
-            <div class="row">
-                <repeat group="{{ @menuItems.beverages }}" value="{{ @item }}">
-                    <div class="col-md-4">
-                        <div class="menu-item">
-                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
-                            <h3 class="menu-item-title">{{ @item.title }}</h3>
-                            <p class="menu-item-description">{{ @item.description }}</p>
-                        </div>
-                    </div>
-                </repeat>
-            </div>
-            <button onclick="topFunction()" id="goToTopBtn" title="Go to top">&#8593;</button>
-        </div>
-    </div>
-</div>
+<!--        &lt;!&ndash; Beverages Items &ndash;&gt;-->
+<!--        <div class="menu-category">-->
+<!--            <h2 id="beverages" class="category-title accent-color">Beverages</h2>-->
+<!--            <div class="row">-->
+<!--                <repeat group="{{ @menuItems.beverages }}" value="{{ @item }}">-->
+<!--                    <div class="col-md-4">-->
+<!--                        <div class="menu-item">-->
+<!--                            <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">-->
+<!--                            <h3 class="menu-item-title">{{ @item.title }}</h3>-->
+<!--                            <p class="menu-item-description">{{ @item.description }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </repeat>-->
+<!--            </div>-->
+<!--            <button onclick="topFunction()" id="goToTopBtn" title="Go to top">&#8593;</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <script src="path/to/bootstrap.bundle.js"></script>
 <script>
