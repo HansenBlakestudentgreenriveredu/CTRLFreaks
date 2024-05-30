@@ -262,3 +262,270 @@
 [29-May-2024 21:36:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:67] Base->run()
 [29-May-2024 21:36:48 UTC] HTTP 404 (GET /images/ice-tea.jpg)
 [29-May-2024 21:36:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:67] Base->run()
+[30-May-2024 04:49:36 UTC] Unable to open views/home.html
+[30-May-2024 04:49:36 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:32] Preview->render()
+[30-May-2024 04:49:36 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Controller->home()
+[30-May-2024 04:49:36 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:69] Base->run()
+[30-May-2024 04:50:56 UTC] Unable to open views/home.html
+[30-May-2024 04:50:56 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:32] Preview->render()
+[30-May-2024 04:50:56 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Controller->home()
+[30-May-2024 04:50:56 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 04:50:59 UTC] Unable to open views/home.html
+[30-May-2024 04:50:59 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:32] Preview->render()
+[30-May-2024 04:50:59 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Controller->home()
+[30-May-2024 04:50:59 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 04:52:06 UTC] Unable to open views/home.html
+[30-May-2024 04:52:06 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:32] Preview->render()
+[30-May-2024 04:52:06 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:29] Controller->home()
+[30-May-2024 04:52:06 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:06:13 UTC] Unable to open views/footer.html
+[30-May-2024 05:06:13 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:06:13 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:06:13 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:06:13 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:06:14 UTC] Unable to open views/footer.html
+[30-May-2024 05:06:14 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:06:14 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:06:14 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:06:14 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:06:30 UTC] Unable to open views/footer.html
+[30-May-2024 05:06:30 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:06:30 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:06:30 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:06:30 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:06:40 UTC] Unable to open views/footer.html
+[30-May-2024 05:06:40 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:06:40 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:06:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:06:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:06:48 UTC] Unable to open views/footer.html
+[30-May-2024 05:06:48 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:06:48 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:06:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:06:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:07:04 UTC] Unable to open views/footer.html
+[30-May-2024 05:07:04 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:07:04 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:07:04 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:07:04 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:08:58 UTC] Unable to open views/footer.html
+[30-May-2024 05:08:58 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:08:58 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:08:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:08:58 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:00 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:00 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:00 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:00 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:00 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:02 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:02 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:02 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:02 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:02 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:06 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:06 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:06 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:06 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:06 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:16 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:16 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:16 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:16 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:16 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:17 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:17 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:17 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:17 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:17 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:43 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:43 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:43 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:43 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:43 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:09:49 UTC] Unable to open views/footer.html
+[30-May-2024 05:09:49 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:09:49 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:09:49 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:09:49 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:10:25 UTC] Unable to open views/footer.html
+[30-May-2024 05:10:25 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:10:25 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:10:25 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:10:25 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:10:26 UTC] Unable to open views/footer.html
+[30-May-2024 05:10:26 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:10:26 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:10:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:10:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:10:27 UTC] Unable to open views/footer.html
+[30-May-2024 05:10:27 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:10:27 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:10:27 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:10:27 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:10:48 UTC] Unable to open views/footer.html
+[30-May-2024 05:10:48 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:10:48 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:10:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:10:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:11:38 UTC] Unable to open views/footer.html
+[30-May-2024 05:11:38 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:11:38 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:11:38 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:11:38 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:11:44 UTC] Unable to open views/footer.html
+[30-May-2024 05:11:44 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:11:44 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:11:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:11:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:11:50 UTC] Unable to open views/footer.html
+[30-May-2024 05:11:50 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:11:50 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:11:50 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:11:50 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:12:00 UTC] Unable to open views/footer.html
+[30-May-2024 05:12:00 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:12:00 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:12:00 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:12:00 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:12:03 UTC] Unable to open views/footer.html
+[30-May-2024 05:12:03 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:12:03 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:12:03 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:12:03 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:12:25 UTC] Unable to open views/footer.html
+[30-May-2024 05:12:25 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:12:25 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:12:25 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:12:25 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:12:32 UTC] Unable to open views/footer.html
+[30-May-2024 05:12:32 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:12:32 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:12:32 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:12:32 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:13:20 UTC] Unable to open views/footer.html
+[30-May-2024 05:13:20 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:13:20 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:13:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:13:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:13:23 UTC] Unable to open views/footer.html
+[30-May-2024 05:13:23 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:13:23 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:13:23 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:13:23 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:13:24 UTC] Unable to open views/footer.html
+[30-May-2024 05:13:24 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:13:24 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:13:24 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:13:24 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:13:26 UTC] Unable to open views/footer.html
+[30-May-2024 05:13:26 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:13:26 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:13:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:13:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:13:28 UTC] Unable to open views/footer.html
+[30-May-2024 05:13:28 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:13:28 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:13:28 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:13:28 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:14:37 UTC] Unable to open views/footer.html
+[30-May-2024 05:14:37 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:14:37 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:14:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:14:37 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:14:42 UTC] Unable to open views/footer.html
+[30-May-2024 05:14:42 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:14:42 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:14:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:14:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:14:48 UTC] Unable to open views/footer.html
+[30-May-2024 05:14:48 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:14:48 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:14:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:14:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:14:52 UTC] Unable to open views/footer.html
+[30-May-2024 05:14:52 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:14:52 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:14:52 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:14:52 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:15:29 UTC] Unable to open views/footer.html
+[30-May-2024 05:15:29 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:15:29 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:15:29 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:15:29 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:15:30 UTC] Unable to open views/footer.html
+[30-May-2024 05:15:30 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:15:30 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:15:30 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:15:30 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:15:33 UTC] Unable to open views/footer.html
+[30-May-2024 05:15:33 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:15:33 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:15:33 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:15:33 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:16:28 UTC] Unable to open views/footer.html
+[30-May-2024 05:16:28 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:16:28 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:16:28 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:16:28 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:16:29 UTC] Unable to open views/footer.html
+[30-May-2024 05:16:29 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:16:29 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:16:29 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:16:29 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:17:21 UTC] Unable to open views/footer.html
+[30-May-2024 05:17:21 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:17:21 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:17:21 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:17:21 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:17:22 UTC] Unable to open views/footer.html
+[30-May-2024 05:17:22 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:17:22 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:17:22 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:17:22 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:17:33 UTC] Unable to open views/footer.html
+[30-May-2024 05:17:33 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.tooo014dnm77.php:171] Preview->render()
+[30-May-2024 05:17:33 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:41] Preview->render()
+[30-May-2024 05:17:33 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:34] Controller->menu()
+[30-May-2024 05:17:33 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:18:59 UTC] HTTP 405 (POST /cart)
+[30-May-2024 05:18:59 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:19:09 UTC] HTTP 405 (POST /cart)
+[30-May-2024 05:19:09 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:21:00 UTC] HTTP 405 (GET /menu)
+[30-May-2024 05:21:00 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:21:01 UTC] Unable to open views/footer.html
+[30-May-2024 05:21:01 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:21:01 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:21:01 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:21:01 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:21:03 UTC] HTTP 405 (GET /menu)
+[30-May-2024 05:21:03 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:21:06 UTC] HTTP 405 (GET /menu)
+[30-May-2024 05:21:06 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:21:16 UTC] Unable to open views/footer.html
+[30-May-2024 05:21:16 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:65] Preview->render()
+[30-May-2024 05:21:16 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:75] Preview->render()
+[30-May-2024 05:21:16 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:21:16 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:30:14 UTC] Call to undefined method Controller::calculateSubtotal() [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/controller/controller.php:69]
+[30-May-2024 05:30:14 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:30:14 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:31:18 UTC] Undefined array key "description"
+[30-May-2024 05:31:18 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] 
+[30-May-2024 05:31:18 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] Base->{closure}()
+[30-May-2024 05:31:18 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:100] Preview->render()
+[30-May-2024 05:31:18 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:31:18 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:31:26 UTC] Undefined array key "description"
+[30-May-2024 05:31:26 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] 
+[30-May-2024 05:31:26 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] Base->{closure}()
+[30-May-2024 05:31:26 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:100] Preview->render()
+[30-May-2024 05:31:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:31:26 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:31:31 UTC] Undefined array key "description"
+[30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] 
+[30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:70] Base->{closure}()
+[30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:100] Preview->render()
+[30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
+[30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
