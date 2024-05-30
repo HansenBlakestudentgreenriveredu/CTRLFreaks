@@ -11,9 +11,12 @@ require_once 'vendor/autoload.php';
 // Include data layer and validation files
 require_once 'model/data-layer.php';
 require_once 'model/validate.php';
+require_once 'controller/controller.php';
 
 // Instantiate the F3 Base class
 $f3 = Base::instance();
+$con = new Controller($f3);
+
 
 // Define a default route
 $f3->route('GET /', function() {
@@ -23,44 +26,32 @@ $f3->route('GET /', function() {
 
 // Home route
 $f3->route('GET /home', function() {
-    $view = new Template();
-    echo $view->render('views/index.html');
+    $GLOBALS['con']->home();
 });
 
 // Route to menu page
-$f3->route('GET /menu', function($f3) {
-    $f3->set('menuItems.breakfast', getBreakfastItems());
-    $f3->set('menuItems.lunch', getLunchItems());
-    $f3->set('menuItems.dinner', getDinnerItems());
-    $f3->set('menuItems.sides', getSides());
-    $f3->set('menuItems.beverages', getBeverages());
-
-    $view = new Template();
-    echo $view->render('views/menu.html');
+$f3->route('GET|POST /menu', function($f3) {
+    $GLOBALS['con']->menu();
 });
 
 // Route to summary page
 $f3->route('GET /orderSummary', function() {
-    $view = new Template();
-    echo $view->render('views/orderSummary.html');
+    $GLOBALS['con']->orderSummary();
 });
 
 // Route to contact page
 $f3->route('GET /contact', function() {
-    $view = new Template();
-    echo $view->render('views/contact.html');
+    $GLOBALS['con']->contact();
 });
 
 // Route to user page
 $f3->route('GET /user', function() {
-    $view = new Template();
-    echo $view->render('views/user.html');
+    $GLOBALS['con']->user();
 });
 
 // Route to cart page
-$f3->route('GET /cart', function() {
-    $view = new Template();
-    echo $view->render('views/cart.html');
+$f3->route('GET|POST /cart', function() {
+    $GLOBALS['con']->cart();
 });
 
 // Run the F3 framework

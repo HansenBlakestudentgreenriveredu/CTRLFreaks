@@ -66,7 +66,12 @@
                             <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
-                            <button class="btn btn-primary" onclick="addToCart('{{ @item.title }}')">Add to Cart</button>
+                            <p class="menu-item-price">$ {{ @item.price }}</p>
+                            <form method="post" action="cart">
+                                <input type="hidden" name="title" value="{{ @item.title }}">
+                                <input type="hidden" name="price" value="{{ @item.price }}">
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </repeat>
@@ -83,7 +88,12 @@
                             <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
-                            <button class="btn btn-primary" onclick="addToCart('{{ @item.title }}')">Add to Cart</button>
+                            <p class="menu-item-price">$ {{ @item.price }}</p>
+                            <form method="post" action="cart">
+                                <input type="hidden" name="title" value="{{ @item.title }}">
+                                <input type="hidden" name="price" value="{{ @item.price }}">
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </repeat>
@@ -100,12 +110,16 @@
                             <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
-                            <button class="btn btn-primary" onclick="addToCart('{{ @item.title }}')">Add to Cart</button>
+                            <p class="menu-item-price">$ {{ @item.price }}</p>
+                            <form method="post" action="cart">
+                                <input type="hidden" name="title" value="{{ @item.title }}">
+                                <input type="hidden" name="price" value="{{ @item.price }}">
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </repeat>
             </div>
-            <button class="btn btn-secondary" onclick="topFunction()" id="goToTopBtn1" title="Go to top">&#8593;</button>
         </div>
 
         <!-- Sides Items -->
@@ -118,7 +132,12 @@
                             <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
-                            <button class="btn btn-primary" onclick="addToCart('{{ @item.title }}')">Add to Cart</button>
+                            <p class="menu-item-price">$ {{ @item.price }}</p>
+                            <form method="post" action="cart">
+                                <input type="hidden" name="title" value="{{ @item.title }}">
+                                <input type="hidden" name="price" value="{{ @item.price }}">
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </repeat>
@@ -135,16 +154,19 @@
                             <img src="{{ @item.img }}" alt="{{ @item.title }}" class="menu-item-img">
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
-                            <button class="btn btn-primary" onclick="addToCart('{{ @item.title }}')">Add to Cart</button>
+                            <p class="menu-item-price">$ {{ @item.price }}</p>
+                            <form method="post" action="cart">
+                                <input type="hidden" name="title" value="{{ @item.title }}">
+                                <input type="hidden" name="price" value="{{ @item.price }}">
+                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </repeat>
             </div>
-            <button class="btn btn-secondary" onclick="topFunction()" id="goToTopBtn" title="Go to top">&#8593;</button>
         </div>
     </div>
 </div>
-
 <script>
     function addToCart(itemTitle) {
         alert(itemTitle + " has been added to your cart!");
