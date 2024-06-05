@@ -266,9 +266,9 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    height: 100%;
     margin: 20px;
     max-width: 600px;
+    overflow: auto;
 }
 
 .contact-submit-button {
