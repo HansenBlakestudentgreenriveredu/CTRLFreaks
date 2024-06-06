@@ -529,3 +529,9 @@
 [30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:100] Preview->render()
 [30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:54] Controller->cart()
 [30-May-2024 05:31:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[30-May-2024 05:54:23 UTC] HTTP 405 (POST /contact)
+[30-May-2024 05:54:23 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
+[06-Jun-2024 16:36:09 UTC] Undefined constant "SESSION" [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.2qfo0f50snoko.php:10]
+[06-Jun-2024 16:36:09 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:47] Preview->render()
+[06-Jun-2024 16:36:09 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:39] Controller->orderSummary()
+[06-Jun-2024 16:36:09 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:58] Base->run()
