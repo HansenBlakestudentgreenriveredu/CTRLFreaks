@@ -824,3 +824,19 @@
 [10-Jun-2024 02:28:54 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:158] Preview->render()
 [10-Jun-2024 02:28:54 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:66] Controller->cart()
 [10-Jun-2024 02:28:54 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:71] Base->run()
+[10-Jun-2024 18:51:40 UTC] syntax error, unexpected token "if" [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:63]
+[10-Jun-2024 18:51:40 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:158] Preview->render()
+[10-Jun-2024 18:51:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:66] Controller->cart()
+[10-Jun-2024 18:51:40 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:71] Base->run()
+[10-Jun-2024 18:51:42 UTC] syntax error, unexpected token "if" [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:63]
+[10-Jun-2024 18:51:42 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:158] Preview->render()
+[10-Jun-2024 18:51:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:66] Controller->cart()
+[10-Jun-2024 18:51:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:71] Base->run()
+[10-Jun-2024 18:51:44 UTC] syntax error, unexpected token "if" [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:63]
+[10-Jun-2024 18:51:44 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:158] Preview->render()
+[10-Jun-2024 18:51:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:66] Controller->cart()
+[10-Jun-2024 18:51:44 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:71] Base->run()
+[10-Jun-2024 18:51:47 UTC] syntax error, unexpected token "if" [/home2/tchudasa/public_html/GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.y1sisyc0ckh7.php:63]
+[10-Jun-2024 18:51:47 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:158] Preview->render()
+[10-Jun-2024 18:51:47 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:66] Controller->cart()
+[10-Jun-2024 18:51:47 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:71] Base->run()

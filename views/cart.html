@@ -59,7 +59,17 @@
             </repeat>
         </div>
         <!-- Clear Cart Button -->
-        <a href="clearCart" class="btn btn-danger">Clear Cart</a>
+
+        <check if="{{ !empty(@cartItems) }}">
+            <a href="clearCart" class="btn btn-danger">Clear Cart</a>
+
+        </check>
+        <check if="{{ empty(@cartItems) }}">
+            <div class="alert alert-info text-center">
+                <p class="mb-2">No items in the cart!</p>
+                <a href="menu" class="btn btn-info">Go to Menu</a>
+            </div>
+        </check>
     </div>
     <div class="checkout-container d-flex flex-column col-md-6 justify-content-around">
         <div class="order-location">
