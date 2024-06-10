@@ -31,11 +31,11 @@ $f3->route('GET /home', function() {
 
 // Route to menu page
 $f3->route('GET|POST /menu', function($f3) {
-    $GLOBALS['con']->menu();
+    $GLOBALS['con']->menu($f3);
 });
 
 // Route to summary page
-$f3->route('GET /orderSummary', function() {
+$f3->route('GET /orderSummary', function($f3) {
     $GLOBALS['con']->orderSummary();
 });
 
@@ -49,10 +49,23 @@ $f3->route('GET /user', function() {
     $GLOBALS['con']->user();
 });
 
-// Route to cart page
-$f3->route('GET|POST /cart', function() {
-    $GLOBALS['con']->cart();
+$f3->route('GET /removeItem/@id', function($f3, $params) {
+    $GLOBALS['con']->removeItem($f3, $params);
 });
+
+$f3->route('GET /clearCart', function($f3) {
+    $GLOBALS['con']->clearCart($f3);
+});
+
+$f3->route('GET|POST /addToCart', function($f3) {
+    $GLOBALS['con']->addToCart($f3);
+});
+
+// Route to cart page
+$f3->route('GET|POST /cart', function($f3) {
+    $GLOBALS['con']->cart($f3);
+});
+
 
 // Run the F3 framework
 $f3->run();

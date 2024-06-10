@@ -42,100 +42,60 @@
     </div>
 </header>
 
-<<<<<<< HEAD
-<!--main hero-->
-<main role="main" class="container-fluid cart-container d-flex flex-column align-items-center justify-content-center p-0">
-    <div class="container-fluid main-cart-container d-flex justify-content-center row align-items-center justify-content-center p-5">
-            <div class="cart-details-container d-flex flex-column col-lg-6">
-                <h1>Review Order</h1>
-                <h3>[MEAL NAME]</h3>
-                <p>food details food details food details food details food details food details
-                    food details food details food details food details </p>
-                <ul>
-                    <li>Flavor: chosen flavor</li>
-                    <li>Side: chosen side</li>
-                    <li>Drink: chosen drink</li>
-                </ul>
-            </div>
-            <div class="checkout-container d-flex flex-column col-lg-6 justify-content-around">
-                <div class="order-location d-flex flex-column">
-                    <p>ORDER FROM:</p>
-                    <p>CTRL Freaks - Seattle</p>
-                    <p>8281 Ave Lane Seattle, WA 48142</p>
-                </div>
-                <div class="discount-container d-flex flex-column">
-                    <p>DISCOUNT</p>
-                    <div class="discount-input-container">
-                        <input type="text" id="discount" name="discount">
-                        <button type="submit" class="discount-submit-button">+</button>
-                    </div>
-                </div>
-                <div class="total-cost-container d-flex flex-row w-100 justify-content-between">
-                    <div class="cost-titles d-flex flex-column">
-                        <p>Subtotal:</p>
-                        <p>Tax and Fees:</p>
-                        <h5>TOTAL:</h5>
-                    </div>
-                    <div class="cost-prices d-flex flex-column">
-                        <p>$7.99</p>
-                        <p>$0.70</p>
-                        <p>$8.69</p>
-                    </div>
-                </div>
-                <div class="check-out-button d-flex flex-column">
-                    <button type="submit" class="checkout-submit-button">CHECKOUT</button>
-                    <p>Your data and information is protected and secured</p>
-                </div>
-            </div>
-=======
-
-
 <div class="container-fluid main-cart-container d-flex justify-content-center row align-items-center justify-content-center p-5">
     <div class="cart-details-container d-flex flex-column col-md-6">
         <h1>Review Order</h1>
-        <repeat group="{{ @cartItems }}" value="{{ @item }}">
-            <h3>{{ @item.title }}</h3>
-
-        </repeat>
->>>>>>> 088c951cb9168176dce0dbe89245aff1f7d8d34d
+        <div class="cart-items">
+            <!-- Loop through cart items -->
+            <repeat group="{{ @cartItems }}" value="{{ @item }}">
+                <div class="cart-item d-flex justify-content-between align-items-center p-3 mb-3 border rounded">
+                    <div>
+                        <h3 class="mb-0">{{ @item.title }}</h3>
+                        <p class="text-muted mb-0">Price: ${{ @item.price }}</p>
+                    </div>
+                    <!-- Remove Item Button -->
+                    <a href="removeItem/{{ @item.itemId }}" class="btn btn-danger">Remove</a>
+                </div>
+            </repeat>
+        </div>
+        <!-- Clear Cart Button -->
+        <a href="clearCart" class="btn btn-danger">Clear Cart</a>
     </div>
     <div class="checkout-container d-flex flex-column col-md-6 justify-content-around">
-        <div class="order-location d-flex flex-column">
-            <p>ORDER FROM:</p>
+        <div class="order-location">
+            <p class="fw-bold">ORDER FROM:</p>
             <p>CTRL Freaks - Seattle</p>
             <p>8281 Ave Lane Seattle, WA 48142</p>
         </div>
-        <div class="discount-container d-flex flex-column">
-            <p>DISCOUNT</p>
-            <div class="discount-input-container">
-                <input type="text" id="discount" name="discount">
-                <button type="submit" class="discount-submit-button">+</button>
+        <div class="discount-container mt-3">
+            <p class="fw-bold">DISCOUNT</p>
+            <div class="input-group">
+                <input type="text" id="discount" name="discount" class="form-control" placeholder="Enter promo code">
+                <button type="submit" class="btn btn-primary">Apply</button>
             </div>
         </div>
-        <div class="total-cost-container d-flex flex-row w-100 justify-content-between">
-            <div class="cost-titles d-flex flex-column">
-                <p>Subtotal:</p>
-                <p>Tax and Fees:</p>
-                <h5>TOTAL:</h5>
-            </div>
-            <div class="cost-prices d-flex flex-column">
+        <div class="total-cost-container mt-3">
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold">Subtotal:</p>
                 <p>${{ @subtotal }}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold">Tax and Fees:</p>
                 <p>${{ @tax }}</p>
-                <p>${{ @total }}</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">TOTAL:</h5>
+                <h5 class="fw-bold">${{ @total }}</h5>
             </div>
         </div>
-        <div class="check-out-button d-flex flex-column">
-            <button type="submit" class="checkout-submit-button">CHECKOUT</button>
-            <p>Your data and information is protected by very real and secure methods such as making the page elements not visible</p>
+        <div class="check-out-button mt-3">
+            <button type="submit" class="btn btn-success">CHECKOUT</button>
+            <p class="mt-2">Your data and information is protected by very real and secure methods such as making the page elements not visible</p>
         </div>
+    </div>
     </div>
 </div>
 
-<<<<<<< HEAD
-<script src="script/scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-=======
->>>>>>> 088c951cb9168176dce0dbe89245aff1f7d8d34d
 </body>
 </html>
