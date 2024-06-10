@@ -16,6 +16,7 @@ require_once 'controller/controller.php';
 // Instantiate the F3 Base class
 $f3 = Base::instance();
 $con = new Controller($f3);
+$dataLayer = new DataLayer();
 
 
 // Define a default route
@@ -52,6 +53,23 @@ $f3->route('GET /user', function() {
 // Route to cart page
 $f3->route('GET|POST /cart', function() {
     $GLOBALS['con']->cart();
+});
+
+$f3->route('GET|POST /offers', function($f3) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $email = "";
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $f3 -> set('errors["email"]', 'Please enter a correct email');
+        } else {
+            $email = $_POST['email'];
+            $f3->set('SESSION.email', $email);
+
+            $GLOBALS['dataLayer']->saveEmailToDatabase($email);
+        }
+
+        $GLOBALS['con']->offers();
+        session_destroy();
+    }
 });
 
 // Run the F3 framework

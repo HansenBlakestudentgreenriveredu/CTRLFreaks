@@ -24,7 +24,7 @@ header {
 
 /*Main container inside body styles*/
 main {
-    height: 100vh;
+    height: 1200px;
     width: 100vh;
     margin: 20px 0px;
     padding: 50px;
@@ -268,7 +268,6 @@ footer {
     padding: 20px;
     margin: 20px;
     max-width: 600px;
-    overflow: auto;
 }
 
 .contact-submit-button {
@@ -353,4 +352,8 @@ footer {
     background-color: rgb(220, 147, 12);
     text-decoration: none;
     color: black;
+}
+
+.discount-input-container {
+    width: 100%;
 }

@@ -3,6 +3,7 @@
 require_once 'model/data-layer.php';
 require_once 'model/validate.php';
 
+
 /**
  * Class Controller
  *
@@ -98,6 +99,12 @@ class Controller
         // Render the cart view
         $view = new Template();
         echo $view->render('views/cart.html');
+    }
+
+    public function offers()
+    {
+        $view = new Template();
+        echo $view->render('views/offers.html');
     }
 
 
