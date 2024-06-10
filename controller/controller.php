@@ -19,8 +19,8 @@ class Controller
         session_start();
 
         // Initialize cart in session if not already set
-        if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = [];
+        if (!isset($_SESSION['cartItem'])) {
+            $_SESSION['cartItem'] = [];
         }
     }
 
@@ -32,14 +32,22 @@ class Controller
 
     public function menu()
     {
+        // Count the number of items in the cart
+        $cartCount = count($_SESSION['cartItem']);
+
+        // Pass the cart count to the view
+        $this->_f3->set('cartCount', $cartCount);
+
         $this->_f3->set('menuItems.breakfast', getBreakfastItems());
         $this->_f3->set('menuItems.lunch', getLunchItems());
         $this->_f3->set('menuItems.dinner', getDinnerItems());
         $this->_f3->set('menuItems.sides', getSides());
         $this->_f3->set('menuItems.beverages', getBeverages());
 
+        // Render the menu view
         $view = new Template();
         echo $view->render('views/menu.html');
+
     }
 
     public function orderSummary()
@@ -66,7 +74,7 @@ class Controller
         foreach ($cartItems as $item) {
             $subtotal += $item['price'];
         }
-        return $subtotal;
+        return round($subtotal, 2);
     }
 
     // Calculate tax based on subtotal
@@ -76,19 +84,67 @@ class Controller
         $taxRate = 0.10;
         $subtotal = $this->calculateSubtotal($cartItems);
         $tax = $subtotal * $taxRate;
-        return $tax;
+        return round($tax, 3);
+    }
+    public function removeItem($f3, $params)
+    {
+        $itemId = $params['id'];
+        if (isset($_SESSION['cartItem'])) {
+            foreach ($_SESSION['cartItem'] as $key => $item) {
+                if ($item['itemId'] == $itemId) {
+                    unset($_SESSION['cartItem'][$key]);
+                    break;
+                }
+            }
+            $_SESSION['cartItem'] = array_values($_SESSION['cartItem']); // Re-index array
+        }
+        $f3->reroute('/cart');
+    }
+
+    public function clearCart($f3)
+    {
+        unset($_SESSION['cartItem']);
+        $f3->reroute('/cart');
     }
 
 
-        public function cart()
+    public function addToCart($f3)
     {
-        // Assuming you have already retrieved cart items
-        $cartItems = $_SESSION['cart'];
+        // Check if 'id' parameter is present in the GET request and is not empty
+        if (isset($_GET['id']) && !empty($_GET['id'])) {
+            $itemId = $_GET['id'];
+
+            // Get item details by ID
+            $item = $this->getItemDetailsById($itemId);
+            if ($item) {
+                // Add the item to the cart
+                $_SESSION['cartItem'][] = $item;
+
+                $f3->reroute('/menu');
+
+            } else {
+                echo '<p>Product not found.</p>';
+            }
+
+        } else {
+            // Handle the case where 'id' is not present in the GET request or is empty
+            echo '<p>Product ID is missing or empty. Unable to add to the cart.</p>';
+        }
+
+        // Render the add to cart view (if needed)
+        $view = new Template();
+        echo $view->render('views/addToCart.php');
+    }
+
+    public function cart()
+    {
+        // Retrieve cart items from session
+        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
 
         // Calculate subtotal, tax, and total
         $subtotal = $this->calculateSubtotal($cartItems);
         $tax = $this->calculateTax($cartItems);
-        $total = $subtotal + $tax;
+        $total = round($subtotal + $tax, 2);
 
         // Pass data to the view
         $this->_f3->set('cartItems', $cartItems);
@@ -96,15 +152,64 @@ class Controller
         $this->_f3->set('tax', $tax);
         $this->_f3->set('total', $total);
 
+//        var_dump($_SESSION); // Debugging line to print the session array
+
         // Render the cart view
         $view = new Template();
         echo $view->render('views/cart.html');
     }
 
+<<<<<<< HEAD
     public function offers()
     {
         $view = new Template();
         echo $view->render('views/offers.html');
+=======
+    function getItemDetailsById($itemId)
+    {
+        // First, check breakfast items
+        $breakfastItems = getBreakfastItems();
+        foreach ($breakfastItems as $item) {
+            if ($item['itemId'] == $itemId) {
+                return $item;
+            }
+        }
+
+        // Then, check lunch items
+        $lunchItems = getLunchItems();
+        foreach ($lunchItems as $item) {
+            if ($item['itemId'] == $itemId) {
+                return $item;
+            }
+        }
+
+        // Then, check dinner items
+        $dinnerItems = getDinnerItems();
+        foreach ($dinnerItems as $item) {
+            if ($item['itemId'] == $itemId) {
+                return $item;
+            }
+        }
+
+        // Then, check sides
+        $sides = getSides();
+        foreach ($sides as $item) {
+            if ($item['itemId'] == $itemId) {
+                return $item;
+            }
+        }
+
+        // Finally, check beverages
+        $beverages = getBeverages();
+        foreach ($beverages as $item) {
+            if ($item['itemId'] == $itemId) {
+                return $item;
+            }
+        }
+
+        // If item not found, return null
+        return null;
+>>>>>>> 2bcd10bbd9514d53828185d5d4b5550e4fc3a390
     }
 
 

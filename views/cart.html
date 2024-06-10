@@ -42,6 +42,7 @@
     </div>
 </header>
 
+<<<<<<< HEAD
 
 <main role="main" class="container d-flex flex-column align-items-center justify-content-center">
     <div class="container-fluid main-cart-container d-flex justify-content-center row align-items-center justify-content-center p-5">
@@ -91,5 +92,72 @@
 <script src="script/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+=======
+<div class="container-fluid main-cart-container d-flex justify-content-center row align-items-center justify-content-center p-5">
+    <div class="cart-details-container d-flex flex-column col-md-6">
+        <h1>Review Order</h1>
+        <div class="cart-items">
+            <!-- Loop through cart items -->
+            <repeat group="{{ @cartItems }}" value="{{ @item }}">
+                <div class="cart-item d-flex justify-content-between align-items-center p-3 mb-3 border rounded">
+                    <div>
+                        <h3 class="mb-0">{{ @item.title }}</h3>
+                        <p class="text-muted mb-0">Price: ${{ @item.price }}</p>
+                    </div>
+                    <!-- Remove Item Button -->
+                    <a href="removeItem/{{ @item.itemId }}" class="btn btn-danger">Remove</a>
+                </div>
+            </repeat>
+        </div>
+        <!-- Clear Cart Button -->
+
+        <check if="{{ !empty(@cartItems) }}">
+            <a href="clearCart" class="btn btn-danger">Clear Cart</a>
+
+        </check>
+        <check if="{{ empty(@cartItems) }}">
+            <div class="alert alert-info text-center">
+                <p class="mb-2">No items in the cart!</p>
+                <a href="menu" class="btn btn-info">Go to Menu</a>
+            </div>
+        </check>
+    </div>
+    <div class="checkout-container d-flex flex-column col-md-6 justify-content-around">
+        <div class="order-location">
+            <p class="fw-bold">ORDER FROM:</p>
+            <p>CTRL Freaks - Seattle</p>
+            <p>8281 Ave Lane Seattle, WA 48142</p>
+        </div>
+        <div class="discount-container mt-3">
+            <p class="fw-bold">DISCOUNT</p>
+            <div class="input-group">
+                <input type="text" id="discount" name="discount" class="form-control" placeholder="Enter promo code">
+                <button type="submit" class="btn btn-primary">Apply</button>
+            </div>
+        </div>
+        <div class="total-cost-container mt-3">
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold">Subtotal:</p>
+                <p>${{ @subtotal }}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <p class="fw-bold">Tax and Fees:</p>
+                <p>${{ @tax }}</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">TOTAL:</h5>
+                <h5 class="fw-bold">${{ @total }}</h5>
+            </div>
+        </div>
+        <div class="check-out-button mt-3">
+            <button type="submit" class="btn btn-success">CHECKOUT</button>
+            <p class="mt-2">Your data and information is protected by very real and secure methods such as making the page elements not visible</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+>>>>>>> 2bcd10bbd9514d53828185d5d4b5550e4fc3a390
 </body>
 </html>
