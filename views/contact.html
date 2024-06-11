@@ -57,7 +57,7 @@
         <!-- Collect Information about customer-->
         <h4>Contact Information</h4>
 
-        <form action="#" method="post" class="form-horizontal">
+        <form action="contact-summary" method="post" class="form-horizontal">
 
             <!-- get first name -->
             <div class="form-group d-flex flex-column align-items-center justify-content-center">
@@ -105,8 +105,7 @@
             <div class = "row">
                 <div class = "col-12">
                     <nav>
-                        <a type ="button" class="contact-submit-button"
-                           href="">Submit</a>
+                        <button type="submit" class="contact-submit-button">Submit</button>
                     </nav>
                 </div>
             </div>
@@ -114,29 +113,7 @@
     </div>
 </main>
 
-<!--Footer of the page-->
-
-<footer class="container-fluid">
-    <div class="container footer-container d-flex flex-column flex-md-row justify-content-between align-items-center p-2">
-        <div class="socials d-flex flex-row">
-            <div class="socials-row d-flex flex-row">
-                <div>CTRLFreaks</div>
-                <img src="images/iconmonstr-facebook-messenger-3-240.png">
-                <img src="images/iconmonstr-gmail-3-240.png">
-                <img src="images/iconmonstr-instagram-13-240.png">
-                <img src="images/iconmonstr-snapchat-3-240.png">
-            </div>
-        </div>
-
-        <div class="offers-deals">
-            <p>Offers and Special Deals Notifications</p>
-            <form class="offers-form" method="POST" action="#">
-                <input type="text" name="email" id="email" placeholder="Email">
-                <button type="submit" class="offers-subscribe-button">Subscribe</button>
-            </form>
-        </div>
-    </div>
-</footer>
+<include href="views/footer.html"></include>
 
 <script src="script/scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

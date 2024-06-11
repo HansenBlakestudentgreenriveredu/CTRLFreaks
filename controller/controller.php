@@ -205,8 +205,21 @@ class Controller
     }
 
 
-    public function offers()
+    public function offers($f3)
     {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $email = "";
+            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                $f3 -> set('errors["email"]', 'Please enter a correct email');
+            } else {
+                $email = $_POST['email'];
+                $f3->set('email', $email);
+
+                $GLOBALS['dataLayer']->saveEmailToDatabase($email);
+                session_destroy();
+            }
+        }
+
         $view = new Template();
         echo $view->render('views/offers.html');
     }
@@ -214,5 +227,10 @@ class Controller
     public function admin() {
         $view = new Template();
         echo $view->render('views/admin.html');
+    }
+
+    public function contactSummary() {
+        $view = new Template();
+        echo $view->render('views/contact-summary.html');
     }
 }

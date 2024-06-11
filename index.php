@@ -69,20 +69,7 @@ $f3->route('GET|POST /cart', function($f3) {
 
 // Route to offers receipt page
 $f3->route('GET|POST /offers', function($f3) {
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $email = "";
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $f3 -> set('errors["email"]', 'Please enter a correct email');
-            $GLOBALS['con']->home();
-        } else {
-            $email = $_POST['email'];
-            $f3->set('SESSION.email', $email);
-
-            $GLOBALS['dataLayer']->saveEmailToDatabase($email);
-            $GLOBALS['con']->offers();
-            session_destroy();
-        }
-    }
+    $GLOBALS['con']->offers($f3);
 });
 
 // Route to admin page
@@ -106,6 +93,31 @@ $f3->route('POST /send-email', function($f3) {
 
 
     $GLOBALS['con']->admin($f3);
+});
+
+// Route to contact-summary
+$f3->route('GET|POST /contact-summary', function($f3) {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $email = "";
+        $firstName = "";
+        $lastName = "";
+        $comment = "";
+        $phone = "";
+
+        $email = $_POST['email'];
+        $firstName = $_POST['firstName'];
+        $lastName = $_POST['lastName'];
+        $phone = $_POST['phoneNumber'];
+        $comment = $_POST['comment'];
+
+        $f3->set('SESSION.email', $email);
+        $f3->set('SESSION.firstName', $firstName);
+        $f3->set('SESSION.lastName', $lastName);
+        $f3->set('SESSION.phone', $phone);
+        $f3->set('SESSION.comment', $comment);
+    }
+
+    $GLOBALS['con']->contactSummary($f3);
 });
 
 // Run the F3 framework
