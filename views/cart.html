@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="home">CTRLFreaks</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,10 +42,10 @@
     </div>
 </header>
 
-<div class="container-fluid main-cart-container d-flex justify-content-center row align-items-center justify-content-center p-5">
-    <div class="cart-details-container d-flex flex-column col-md-6 pt-2">
+<div class="container-fluid main-cart-container d-flex flex-wrap justify-content-center align-items-center p-5">
+    <div class="cart-details-container d-flex flex-column col-lg-6 col-12 pt-2 mb-3">
         <h1>Review Order</h1>
-        <div class="cart-items overflow-auto">
+        <div class="cart-items overflow-auto" style="max-height: 400px;">
             <!-- Loop through cart items -->
             <repeat group="{{ @cartItems }}" value="{{ @item }}">
                 <div class="cart-item d-flex justify-content-between align-items-center p-3 mb-3 border rounded">
@@ -71,7 +71,7 @@
         </check>
     </div>
     <!-- Checkout Section -->
-    <div class="checkout-container d-flex flex-column col-md-6 justify-content-around border rounded p-3">
+    <div class="checkout-container d-flex flex-column col-lg-6 col-12 justify-content-around border rounded p-3">
         <!-- Order Location Details -->
         <div class="order-location">
             <p class="fw-bold">ORDER FROM:</p>
@@ -126,13 +126,11 @@
             <hr>
 
             <!-- Total with Discount -->
-            <check if="{{ isset(@discountApplied) && @discountApplied }}">
-                <hr>
-                <div class="d-flex justify-content-between">
-                    <h5 class="fw-bold">TOTAL (After Discount):</h5>
-                    <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
-                </div>
-            </check>
+            <div class="d-flex justify-content-between">
+                <h5 class="fw-bold">TOTAL (After Discount):</h5>
+                <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
+            </div>
+        </div>
         <!-- Checkout Button -->
         <div class="check-out-button mt-3 w-100 text-center">
             <button type="submit" class="btn btn-success btn-lg btn-block">CHECKOUT</button>
@@ -141,5 +139,9 @@
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
