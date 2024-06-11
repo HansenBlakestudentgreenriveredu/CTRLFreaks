@@ -8,7 +8,7 @@
 
 <body class="menubody">
 <!--Header-->
-<header class="container-fluid sticky-top">
+<header class="container-fluid">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
@@ -34,10 +34,7 @@
                                 <a class="nav-link" href="menu">Order</a>
                             </div>
                             <a href="user"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
-                            <a href="{{ @BASE }}/cart" class="cart-icon-container">
-                                <img src="images/iconmonstr-shopping-cart-22-240.png" alt="cart icon" class="cart-icon">
-                                <span class="cart-item-count">Items: {{ @cartCount }}</span>
-                            </a>
+                            <a href="cart"><img src="images/iconmonstr-shopping-cart-22-240.png" alt="cart icon"></a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +67,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="post" action="cart">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -92,7 +89,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="post" action="cart">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -114,7 +111,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="post" action="cart">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -136,7 +133,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="post" action="cart">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -158,7 +155,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="post" action="cart">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -182,7 +179,6 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
-
-
+<script src="script/scripts.js"></script>
 </body>
 </html>

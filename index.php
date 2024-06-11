@@ -32,11 +32,11 @@ $f3->route('GET /home', function() {
 
 // Route to menu page
 $f3->route('GET|POST /menu', function($f3) {
-    $GLOBALS['con']->menu($f3);
+    $GLOBALS['con']->menu();
 });
 
 // Route to summary page
-$f3->route('GET /orderSummary', function($f3) {
+$f3->route('GET /orderSummary', function() {
     $GLOBALS['con']->orderSummary();
 });
 
@@ -50,11 +50,11 @@ $f3->route('GET /user', function() {
     $GLOBALS['con']->user();
 });
 
-$f3->route('GET /removeItem/@id', function($f3, $params) {
-    $GLOBALS['con']->removeItem($f3, $params);
+// Route to cart page
+$f3->route('GET|POST /cart', function() {
+    $GLOBALS['con']->cart();
 });
 
-<<<<<<< HEAD
 $f3->route('GET|POST /offers', function($f3) {
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $email = "";
@@ -72,22 +72,6 @@ $f3->route('GET|POST /offers', function($f3) {
     }
 });
 
-=======
-$f3->route('GET /clearCart', function($f3) {
-    $GLOBALS['con']->clearCart($f3);
-});
-
-$f3->route('GET|POST /addToCart', function($f3) {
-    $GLOBALS['con']->addToCart($f3);
-});
-
-// Route to cart page
-$f3->route('GET|POST /cart', function($f3) {
-    $GLOBALS['con']->cart($f3);
-});
-
-
->>>>>>> 2bcd10bbd9514d53828185d5d4b5550e4fc3a390
 // Run the F3 framework
 $f3->run();
 ?>

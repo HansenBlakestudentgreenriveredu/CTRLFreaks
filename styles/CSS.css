@@ -46,10 +46,19 @@ main {
     width: 100px;
     height: 40px;
     background-color: orange;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     font-weight: bold;
+    transition: 0.6s;
+    cursor: pointer;
+}
 
+.order-button:hover {
+    background-color: #e0960f;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /*Container for the offers and deals notification form*/
@@ -239,11 +248,13 @@ footer {
     padding: 3px 10px;
     margin: 0;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .not-active {
     margin: 0;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .contact-input-size {
@@ -255,7 +266,6 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    height: 100%;
     margin: 20px;
     max-width: 600px;
 }
@@ -264,7 +274,18 @@ footer {
     background-color: rgba(255,165,0);
     color: black;
     border: none;
+    padding: 10px 25px;
     font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.contact-submit-button:hover {
+    background-color: rgb(220, 147, 12);
+    text-decoration: none;
+    color: black;
 }
 
 .user-container {
@@ -283,7 +304,11 @@ footer {
 
 .main-cart-container {
     background-color: rgb(246, 247, 248);
-    height: 100%;
+    height: 80%;
+    overflow: auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .checkout-container {
@@ -293,9 +318,17 @@ footer {
     height: 90%;
 }
 
+.check-out-button {
+    width: 70%;
+    text-align: center;
+    align-self: center;
+}
 
+.check-out-button p {
+    font-size: 13px;
+    color: #6c757d;
+}
 
-<<<<<<< HEAD
 .check-out-button button {
     width: 200px;
     text-align: center;
@@ -324,5 +357,3 @@ footer {
 .discount-input-container {
     width: 100%;
 }
-=======
->>>>>>> 2bcd10bbd9514d53828185d5d4b5550e4fc3a390
