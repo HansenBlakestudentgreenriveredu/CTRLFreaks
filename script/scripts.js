@@ -34,3 +34,15 @@ nonActiveStatus.addEventListener("mousedown", function() {
     nonActiveStatus.className = "active-choice";
     activeUserNotificationStatus.className = "not-active";
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Add event listeners to all forms with class 'add-to-cart-form'
+    const addToCartForms = document.querySelectorAll('.add-to-cart-form');
+    addToCartForms.forEach(form => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            alert('Item added to cart!'); // Display alert message
+            form.submit(); // Submit the form
+        });
+    });
+});

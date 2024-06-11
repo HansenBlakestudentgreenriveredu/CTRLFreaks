@@ -5,7 +5,23 @@
 -->
 
 <include href="views/header.html"></include>
-
+<head>
+    <!-- Your existing head content -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Add event listeners to all forms with class 'add-to-cart-form'
+            const addToCartForms = document.querySelectorAll('.add-to-cart-form');
+            addToCartForms.forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+                    const itemName = form.getAttribute('data-item-name'); // Get the item name from the data attribute
+                    alert(`Item "${itemName}" added to cart!`); // Display alert message with item name
+                    form.submit(); // Submit the form
+                });
+            });
+        });
+    </script>
+</head>
 <body class="menubody">
 <!--Header-->
 <header class="container-fluid sticky-top">
@@ -70,7 +86,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="POST" action="addToCart?id={{ @item.itemId }}" class="add-to-cart-form" data-item-name="{{ @item.title }}">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -92,7 +108,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="POST" action="addToCart?id={{ @item.itemId }}" class="add-to-cart-form" data-item-name="{{ @item.title }}">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -114,7 +130,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="POST" action="addToCart?id={{ @item.itemId }}" class="add-to-cart-form" data-item-name="{{ @item.title }}">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -136,7 +152,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="POST" action="addToCart?id={{ @item.itemId }}" class="add-to-cart-form" data-item-name="{{ @item.title }}">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -158,7 +174,7 @@
                             <h3 class="menu-item-title">{{ @item.title }}</h3>
                             <p class="menu-item-description">{{ @item.description }}</p>
                             <p class="menu-item-price">$ {{ @item.price }}</p>
-                            <form method="POST" action="addToCart?id={{ @item.itemId }}">
+                            <form method="POST" action="addToCart?id={{ @item.itemId }}" class="add-to-cart-form" data-item-name="{{ @item.title }}">
                                 <input type="hidden" name="title" value="{{ @item.title }}">
                                 <input type="hidden" name="price" value="{{ @item.price }}">
                                 <button type="submit" class="btn btn-primary">Add to Cart</button>
@@ -170,19 +186,12 @@
         </div>
     </div>
 </div>
-<script>
-    function addToCart(itemTitle) {
-        alert(itemTitle + " has been added to your cart!");
-        // Add AJAX or form submission logic here to handle the cart addition
-    }
 
-    // Scroll to top function
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
-
-
+<!-- Footer -->
+<footer class="container-fluid bg-light py-3">
+    <div class="container text-center">
+        <p>&copy; 2024 CTRLFreaks. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

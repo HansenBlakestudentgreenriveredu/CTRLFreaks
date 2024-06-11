@@ -126,11 +126,13 @@
             <hr>
 
             <!-- Total with Discount -->
-            <div class="d-flex justify-content-between">
-                <h5 class="fw-bold">TOTAL (After Discount):</h5>
-                <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
-            </div>
-        </div>
+            <check if="{{ isset(@discountApplied) && @discountApplied }}">
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <h5 class="fw-bold">TOTAL (After Discount):</h5>
+                    <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
+                </div>
+            </check>
         <!-- Checkout Button -->
         <div class="check-out-button mt-3 w-100 text-center">
             <button type="submit" class="btn btn-success btn-lg btn-block">CHECKOUT</button>
