@@ -16,7 +16,6 @@ require_once 'controller/controller.php';
 // Instantiate the F3 Base class
 $f3 = Base::instance();
 $con = new Controller($f3);
-$dataLayer = new DataLayer();
 
 
 // Define a default route
@@ -32,11 +31,11 @@ $f3->route('GET /home', function() {
 
 // Route to menu page
 $f3->route('GET|POST /menu', function($f3) {
-    $GLOBALS['con']->menu();
+    $GLOBALS['con']->menu($f3);
 });
 
 // Route to summary page
-$f3->route('GET /orderSummary', function() {
+$f3->route('GET /orderSummary', function($f3) {
     $GLOBALS['con']->orderSummary();
 });
 
@@ -50,27 +49,23 @@ $f3->route('GET /user', function() {
     $GLOBALS['con']->user();
 });
 
+$f3->route('GET /removeItem/@id', function($f3, $params) {
+    $GLOBALS['con']->removeItem($f3, $params);
+});
+
+$f3->route('GET /clearCart', function($f3) {
+    $GLOBALS['con']->clearCart($f3);
+});
+
+$f3->route('GET|POST /addToCart', function($f3) {
+    $GLOBALS['con']->addToCart($f3);
+});
+
 // Route to cart page
-$f3->route('GET|POST /cart', function() {
-    $GLOBALS['con']->cart();
+$f3->route('GET|POST /cart', function($f3) {
+    $GLOBALS['con']->cart($f3);
 });
 
-$f3->route('GET|POST /offers', function($f3) {
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $email = "";
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $f3 -> set('errors["email"]', 'Please enter a correct email');
-        } else {
-            $email = $_POST['email'];
-            $f3->set('SESSION.email', $email);
-
-            $GLOBALS['dataLayer']->saveEmailToDatabase($email);
-        }
-
-        $GLOBALS['con']->offers();
-        session_destroy();
-    }
-});
 
 // Run the F3 framework
 $f3->run();

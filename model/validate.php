@@ -26,16 +26,3 @@ function validDrinks($drinks){
 function validDrinkss($drinks){
     return in_array($drinks, getDrinks());
 }
-
-function validEmail($email) {
-    if (empty($email)) {
-        return false;
-    } else {
-        // check if e-mail address is well-formed
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return false;
-        }
-    }
-
-    return true;
-}
