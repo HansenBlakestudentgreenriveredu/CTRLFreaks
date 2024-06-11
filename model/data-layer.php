@@ -4,6 +4,64 @@
  * It belongs to the model.
  */
 
+class DataLayer {
+    private $_dbh;
+
+    /**
+     * DataLayer constructor connects to PDO Database
+     */
+    function __construct() {
+        // Require my PDO data base connection credentials
+        require_once $_SERVER['DOCUMENT_ROOT'].'/../config.php';
+        try {
+            // Instantiate our PDO database object
+            $this->dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
+        } catch (PDOException $e) {
+            die ($e->getMessage());
+        }
+    }
+
+    /**
+     * Save a restaurant order to the database
+     * @param Order an Order object
+     * @return int the Order ID
+     */
+    function saveEmailToDatabase($email) {
+        // Define query
+        $sql = 'INSERT INTO subscribedEmail (email) VALUES (:email)';
+
+        // prepare the statement
+        $statement = $this->dbh->prepare($sql);
+
+        // Bind the
+        $statement->bindParam(':email', $email);
+
+        // Execute statement
+        $statement->execute();
+    }
+
+    function getEmails() {
+        // Define the query
+        $sql = "SELECT * FROM `subscribedEmail`";
+
+        // Prepare the statement
+        $statement = $this->dbh->prepare($sql);
+
+        // Bind the parameters (we don't need to for this)
+
+        // Execute the statement
+        $statement->execute();
+
+        // Process the results
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+
+
+    }
+}
+
+
+
 // Get breakfast items
 function getBreakfastItems() {
     return [

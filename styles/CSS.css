@@ -292,3 +292,12 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 90%;
 }
+
+.table-container {
+    height: 50%;
+    overflow: auto;
+}
+
+.main-admin-container {
+    height: 100%;
+}

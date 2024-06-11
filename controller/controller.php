@@ -205,4 +205,14 @@ class Controller
     }
 
 
+    public function offers()
+    {
+        $view = new Template();
+        echo $view->render('views/offers.html');
+    }
+
+    public function admin() {
+        $view = new Template();
+        echo $view->render('views/admin.html');
+    }
 }

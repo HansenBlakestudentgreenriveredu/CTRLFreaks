@@ -80,11 +80,15 @@
 
         <div class="offers-deals">
             <p>Offers and Special Deals Notifications</p>
-            <form class="offers-form" method="POST" action="#">
+            <form class="offers-form" method="POST" action="offers">
                 <input type="text" name="email" id="email" placeholder="Email">
                 <button type="submit" class="offers-subscribe-button">Subscribe</button>
             </form>
+            <check if="{{ isset(@errors['email']) }}">
+                <span class="err text-danger">{{ @errors['email'] }}</span>
+            </check>
         </div>
+
     </div>
 </footer>
 
