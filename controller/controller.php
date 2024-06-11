@@ -2,6 +2,11 @@
 
 require_once 'model/data-layer.php';
 require_once 'model/validate.php';
+require_once 'classes/pricing.php';
+require_once 'classes/lookupItems.php';
+
+// Define constants
+
 
 /**
  * Class Controller
@@ -12,6 +17,11 @@ class Controller
 {
     private $_f3;
 
+    /**
+     * Controller constructor.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     */
     public function __construct($f3)
     {
         $this->_f3 = $f3;
@@ -23,12 +33,18 @@ class Controller
         }
     }
 
+    /**
+     * Display the home page.
+     */
     public function home()
     {
         $view = new Template();
         echo $view->render('views/index.html');
     }
 
+    /**
+     * Display the menu page.
+     */
     public function menu()
     {
         // Count the number of items in the cart
@@ -46,45 +62,41 @@ class Controller
         // Render the menu view
         $view = new Template();
         echo $view->render('views/menu.html');
-
     }
 
+    /**
+     * Display the order summary page.
+     */
     public function orderSummary()
     {
         $view = new Template();
         echo $view->render('views/orderSummary.html');
     }
 
+    /**
+     * Display the contact page.
+     */
     public function contact()
     {
         $view = new Template();
         echo $view->render('views/contact.html');
     }
 
+    /**
+     * Display the user page.
+     */
     public function user()
     {
         $view = new Template();
         echo $view->render('views/user.html');
     }
 
-    private function calculateSubtotal($cartItems)
-    {
-        $subtotal = 0;
-        foreach ($cartItems as $item) {
-            $subtotal += $item['price'];
-        }
-        return round($subtotal, 2);
-    }
-
-    // Calculate tax based on subtotal
-    private function calculateTax($cartItems)
-    {
-        // Assuming tax rate is 10% (0.10)
-        $taxRate = 0.10;
-        $subtotal = $this->calculateSubtotal($cartItems);
-        $tax = $subtotal * $taxRate;
-        return round($tax, 3);
-    }
+    /**
+     * Remove an item from the cart.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     * @param array $params Route parameters
+     */
     public function removeItem($f3, $params)
     {
         $itemId = $params['id'];
@@ -100,34 +112,56 @@ class Controller
         $f3->reroute('/cart');
     }
 
+    /**
+     * Clear the cart.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     */
     public function clearCart($f3)
     {
         unset($_SESSION['cartItem']);
         $f3->reroute('/cart');
     }
 
-
+    /**
+     * Add an item to the cart.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     */
     public function addToCart($f3)
     {
         // Check if 'id' parameter is present in the GET request and is not empty
         if (isset($_GET['id']) && !empty($_GET['id'])) {
             $itemId = $_GET['id'];
 
+            // Sanitize and validate the itemId
+            $sanitizedItemId = validateAndSanitize($itemId);
+
+            // Validate the itemId
+            if (!validItemId($sanitizedItemId)) {
+                echo getErrorMessage('Product ID', 'Invalid product ID.');
+                return;
+            }
+
             // Get item details by ID
-            $item = $this->getItemDetailsById($itemId);
+            $item = getItemDetailsById($sanitizedItemId);
             if ($item) {
+                // Validate the item's price
+                if (!validPrice($item['price'])) {
+                    echo getErrorMessage('Price', 'Invalid price.');
+                    return;
+                }
+
                 // Add the item to the cart
                 $_SESSION['cartItem'][] = $item;
 
                 $f3->reroute('/menu');
-
             } else {
-                echo '<p>Product not found.</p>';
+                echo getErrorMessage('Product', 'Product not found.');
             }
-
         } else {
             // Handle the case where 'id' is not present in the GET request or is empty
-            echo '<p>Product ID is missing or empty. Unable to add to the cart.</p>';
+            echo getErrorMessage('Product ID', 'Product ID is missing or empty. Unable to add to the cart.');
         }
 
         // Render the add to cart view (if needed)
@@ -135,14 +169,62 @@ class Controller
         echo $view->render('views/addToCart.php');
     }
 
-    public function cart()
+    /**
+     * Apply discount to the cart.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     */
+    public function applyDiscount($f3)
     {
+        $discountCode = $_POST['discount'] ?? '';
+
+        // Validate the discount code
+        if (!validDiscountCode($discountCode)) {
+            // Handle invalid discount code
+            // You can redirect back to the cart page with an error message
+            // For simplicity, I'm just redirecting back to the cart page here
+            $f3->reroute('/cart');
+            return;
+        }
+
+        // Get the discount percentage
+        $discountPercentage = getDiscountCodes()[$discountCode];
+
         // Retrieve cart items from session
         $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
 
         // Calculate subtotal, tax, and total
-        $subtotal = $this->calculateSubtotal($cartItems);
-        $tax = $this->calculateTax($cartItems);
+        $subtotal = calculateSubtotal($cartItems);
+        $tax = calculateTax($cartItems);
+
+        // Apply discount
+        $discount = ($subtotal * $discountPercentage) / 100;
+        $total = round(($subtotal + $tax) - $discount, 2);
+
+        // Store the total and discount applied flag in session
+        $_SESSION['total'] = $total;
+        $_SESSION['discountApplied'] = true;
+
+        // Redirect back to the cart page
+        $f3->reroute('/cart');
+    }
+
+    /**
+     * Remove discount from the cart.
+     *
+     * @param \Base $f3 Fat-Free Framework instance
+     */
+    public function removeDiscount($f3)
+    {
+        // Remove discount flag from session
+        unset($_SESSION['discountApplied']);
+
+        // Retrieve cart items from session
+        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
+
+        // Calculate subtotal, tax, and total without discount
+        $subtotal = calculateSubtotal($cartItems);
+        $tax = calculateTax($cartItems);
         $total = round($subtotal + $tax, 2);
 
         // Pass data to the view
@@ -150,60 +232,60 @@ class Controller
         $this->_f3->set('subtotal', $subtotal);
         $this->_f3->set('tax', $tax);
         $this->_f3->set('total', $total);
+        $this->_f3->set('discountApplied', false);
+        $this->_f3->set('discount', 0);
+        $this->_f3->set('totalAfterDiscount', $total); // Total remains the same without discount
 
-//        var_dump($_SESSION); // Debugging line to print the session array
+        // Redirect back to the cart page
+        $f3->reroute('/cart');
+    }
+
+
+
+
+    /**
+     * Display the cart page.
+     */
+    public function cart()
+    {
+        // Retrieve cart items from session
+        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
+
+        // Calculate subtotal, tax, and total
+        $subtotal = calculateSubtotal($cartItems);
+        $tax = calculateTax($cartItems);
+        $total = round($subtotal + $tax, 2);
+
+        // Check if a discount has been applied
+        $discountApplied = isset($_SESSION['discountApplied']) ? $_SESSION['discountApplied'] : false;
+
+        // If a discount has been applied, calculate the discount and update the total
+        if ($discountApplied) {
+            // Calculate discount (e.g., 10% of subtotal)
+            $discountPercentage = 10; // Example discount percentage
+            $discount = ($subtotal * $discountPercentage) / 100;
+
+            // Update total with discount
+            $totalAfterDiscount = $total - $discount;
+        } else {
+            // If no discount applied, total remains the same
+            $discount = 0;
+            $totalAfterDiscount = $total;
+        }
+
+        // Pass data to the view
+        $this->_f3->set('cartItems', $cartItems);
+        $this->_f3->set('subtotal', $subtotal);
+        $this->_f3->set('tax', $tax);
+        $this->_f3->set('total', $total);
+        $this->_f3->set('discountApplied', $discountApplied);
+        $this->_f3->set('discount', $discount);
+        $this->_f3->set('totalAfterDiscount', $totalAfterDiscount);
 
         // Render the cart view
         $view = new Template();
         echo $view->render('views/cart.html');
     }
-
-    function getItemDetailsById($itemId)
-    {
-        // First, check breakfast items
-        $breakfastItems = getBreakfastItems();
-        foreach ($breakfastItems as $item) {
-            if ($item['itemId'] == $itemId) {
-                return $item;
-            }
-        }
-
-        // Then, check lunch items
-        $lunchItems = getLunchItems();
-        foreach ($lunchItems as $item) {
-            if ($item['itemId'] == $itemId) {
-                return $item;
-            }
-        }
-
-        // Then, check dinner items
-        $dinnerItems = getDinnerItems();
-        foreach ($dinnerItems as $item) {
-            if ($item['itemId'] == $itemId) {
-                return $item;
-            }
-        }
-
-        // Then, check sides
-        $sides = getSides();
-        foreach ($sides as $item) {
-            if ($item['itemId'] == $itemId) {
-                return $item;
-            }
-        }
-
-        // Finally, check beverages
-        $beverages = getBeverages();
-        foreach ($beverages as $item) {
-            if ($item['itemId'] == $itemId) {
-                return $item;
-            }
-        }
-
-        // If item not found, return null
-        return null;
-    }
-
 
     public function offers($f3)
     {

@@ -62,8 +62,13 @@ class DataLayer {
 
 
 
-// Get breakfast items
-function getBreakfastItems() {
+/**
+ * Get breakfast items.
+ *
+ * @return array
+ */
+function getBreakfastItems()
+{
     return [
         [
             'itemId' => 1,
@@ -89,8 +94,13 @@ function getBreakfastItems() {
     ];
 }
 
-// Get lunch items
-function getLunchItems() {
+/**
+ * Get lunch items.
+ *
+ * @return array
+ */
+function getLunchItems()
+{
     return [
         [
             'itemId' => 4,
@@ -116,15 +126,20 @@ function getLunchItems() {
     ];
 }
 
-// Get dinner items
-function getDinnerItems() {
+/**
+ * Get dinner items.
+ *
+ * @return array
+ */
+function getDinnerItems()
+{
     return [
         [
             'itemId' => 7,
             'title' => 'Grilled Salmon',
             'description' => 'Grilled salmon served with steamed vegetables.',
             'price' => 12.99,
-            'img' => 'images/grilled salmon.jpeg'
+            'img' => 'images/grilled-salmon.jpeg'
         ],
         [
             'itemId' => 8,
@@ -143,8 +158,13 @@ function getDinnerItems() {
     ];
 }
 
-// Get sides
-function getSides() {
+/**
+ * Get side items.
+ *
+ * @return array
+ */
+function getSides()
+{
     return [
         [
             'itemId' => 10,
@@ -170,8 +190,13 @@ function getSides() {
     ];
 }
 
-// Get beverages
-function getBeverages() {
+/**
+ * Get beverages.
+ *
+ * @return array
+ */
+function getBeverages()
+{
     return [
         [
             'itemId' => 13,
@@ -185,7 +210,7 @@ function getBeverages() {
             'title' => 'Iced Tea',
             'description' => 'Refreshing iced tea.',
             'price' => 2.49,
-            'img' => 'images/ice tea.jpg'
+            'img' => 'images/ice-tea.jpg'
         ],
         [
             'itemId' => 15,
@@ -194,6 +219,24 @@ function getBeverages() {
             'price' => 1.49,
             'img' => 'images/soda.jpg'
         ]
+    ];
+}
+
+/**
+ * Get discount promo codes and their corresponding discount percentages.
+ *
+ * @return array
+ */
+function getDiscountCodes()
+{
+    return [
+        'SUMMER20' => 20,  // 20% discount for SUMMER20 code
+        'SAVE10' => 10,    // 10% discount for SAVE10 code
+        'FREESHIP' => 0,   // Free shipping for FREESHIP code (0% discount)
+        'FAMILY25' => 25,  // 25% discount for FAMILY25 code
+        'HAPPYHOUR15' => 15,  // 15% discount for HAPPYHOUR15 code
+        'WELCOME20' => 20, // 20% discount for WELCOME20 code
+        'FALLSALE30' => 30, // 30% discount for FALLSALE30 code
     ];
 }
 ?>

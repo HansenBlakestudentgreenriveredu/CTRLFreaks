@@ -58,6 +58,14 @@ $f3->route('GET /clearCart', function($f3) {
     $GLOBALS['con']->clearCart($f3);
 });
 
+$f3->route('GET|POST /applyDiscount', function($f3) {
+    $GLOBALS['con']->applyDiscount($f3);
+});
+
+$f3->route('GET|POST /removeDiscount', function($f3) {
+    $GLOBALS['con']->removeDiscount($f3);
+});
+
 $f3->route('GET|POST /addToCart', function($f3) {
     $GLOBALS['con']->addToCart($f3);
 });
