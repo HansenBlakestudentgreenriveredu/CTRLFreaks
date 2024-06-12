@@ -38,6 +38,7 @@ class Controller
      */
     public function home()
     {
+
         $view = new Template();
         echo $view->render('views/index.html');
     }

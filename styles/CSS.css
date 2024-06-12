@@ -355,3 +355,26 @@ body.add-to-cart-body {
 .main-admin-container {
     height: 100%;
 }
+
+
+.cart-icon-container {
+    display: flex;
+    align-items: center;
+    color: #6c757d; /* Default Bootstrap text color for navbar */
+    text-decoration: none;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.cart-item-count {
+    background-color: #ffeb3b; /* Yellow color */
+    color: #000; /* Black text */
+    font-weight: bold;
+    padding: 0.5em 0.75em;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
