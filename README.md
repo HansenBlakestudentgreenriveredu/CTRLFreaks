@@ -83,5 +83,12 @@ Team Member 2: https://github.com/Tilak-21
 
 Team Member 3: https://github.com/HansenBlakestudentgreenriveredu
 
+# Login Info for Admin Page (FOR TESTING)
+User: Admin
+
+Pass: 123
+
+(Yes, very secure)
+
 # Acknowledgments
 Special thanks to our course instructor for your guidance :)

@@ -20,7 +20,6 @@ header {
     height: 100vh;
     background-image: url("../images/pexels-polina-tankilevitch-4109136.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.7);
     background-blend-mode: lighten;
@@ -28,7 +27,7 @@ header {
 
 /* Main container inside body styles */
 main {
-    height: 100vh;
+    height: 1200px;
     width: 100vh;
     margin: 20px 0;
     padding: 50px;
@@ -473,6 +472,7 @@ body.add-to-cart-body {
 
 /* Styles for the main admin container */
 .main-admin-container {
+    height: 1000px;
     padding: 20px;
     background-color: rgb(246, 247, 248);
     border-radius: 5px;
