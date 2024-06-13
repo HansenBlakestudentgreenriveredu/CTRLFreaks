@@ -1,5 +1,7 @@
 # CTRLFreaks Restaurant Webpage
 
+https://voleksiyenko.greenriverdev.com/328/CTRLFreaks/home
+
 
 This project is a full-stack restaurant web application developed using the Fat-Free Framework. 
 It implements an MVC architecture, separating business logic and database interactions for clarity and 
@@ -67,6 +69,12 @@ The project adheres to the MVC (Model-View-Controller) pattern, ensuring a clear
 
 1. Effort and Professionalism: The project reflects a thorough understanding of full-stack development principles and attention to detail.
 2. Functionality and Design: The application is fully functional, with a user-friendly design and seamless user experience.
+
+# Most Recent UML Diagram
+![Screenshot 2024-06-12 234705](https://github.com/HansenBlakestudentgreenriveredu/CTRLFreaks/assets/68962947/29ae6546-81d6-4e0e-bfaf-84ac5f1bd6cc)
+
+# Github Contribution Insight
+![Screenshot 2024-06-12 234636](https://github.com/HansenBlakestudentgreenriveredu/CTRLFreaks/assets/68962947/3bbe6e06-d78a-45db-9781-b5310d541f57)
 
 # Authors
 Team Member 1: https://github.com/vladoleksiyenko
