@@ -146,5 +146,15 @@ function validDiscountCode($code)
     return array_key_exists($code, $discountCodes);
 }
 
+// Function to validate email
+function validateEmail($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
+// Function to validate phone number
+function validatePhoneNumber($phone) {
+    // Basic validation: must contain only digits and optional plus sign, spaces, dashes
+    return preg_match('/^\+?[\d\s\-]+$/', $phone);
+}
 
 ?>

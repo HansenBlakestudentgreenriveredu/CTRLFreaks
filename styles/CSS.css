@@ -264,6 +264,9 @@ footer {
     color: black;
     border: none;
     font-weight: bold;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
 }
 
 .user-container {
@@ -347,15 +350,6 @@ body.add-to-cart-body {
     background-color: #218838;
 }
 
-.table-container {
-    height: 50%;
-    overflow: auto;
-}
-
-.main-admin-container {
-    height: 100%;
-}
-
 
 .cart-icon-container {
     display: flex;
@@ -378,3 +372,87 @@ body.add-to-cart-body {
     border-radius: 50px;
     font-size: 0.9rem;
 }
+
+.table-container {
+    height: 50%;
+    overflow: auto;
+    margin-bottom: 50px;
+    border-bottom: 1px solid grey;
+}
+
+.main-admin-container {
+    height: 100%;
+}
+
+.contact-summary-user-info {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-admin-container {
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-login-container {
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+    grid-gap: 20px;
+}
+
+.comment {
+    overflow: auto;
+}
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* 1px wider than Lion. */
+    /* This is more usable for users trying to click it. */
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+    /* This is the EXACT color of Mac OS scrollbars.
+       Yes, I pulled out digital color meter */
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+    -webkit-border-radius: 100px;
+}
+
+.send-email-button {
+    background-color: rgba(255, 165, 0);
+    color: black;
+    border: none;
+    font-weight: bold;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.send-email-button:hover {
+    background-color: rgb(218, 142, 0);
+}
+

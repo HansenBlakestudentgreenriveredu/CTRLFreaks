@@ -77,11 +77,68 @@ class Controller
     /**
      * Display the contact page.
      */
-    public function contact()
+    public function contact($f3)
     {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $errorAmount = 0;
+
+            // Sanitize and validate form inputs
+            $firstName = $_POST['firstName'];
+            $lastName = $_POST['firstName'];
+            $email = $_POST['email'];
+            $phone = $_POST['phoneNumber'];
+            $comment = $_POST['comment'];
+
+            $firstName = sanitizeInput($_POST['firstName']);
+            $lastName = sanitizeInput($_POST['lastName']);
+            $email = sanitizeInput($_POST['email']);
+            $phone = sanitizeInput($_POST['phoneNumber']);
+            $message = sanitizeInput($_POST['comment']);
+
+
+            if (empty($firstName)) {
+                $f3 -> set('errors["firstName"]', 'Please enter a correct first name');
+                $errorAmount++;
+            }
+
+            if (empty($lastName)) {
+                $f3 -> set('errors["lastName"]', 'Please enter a correct last name');
+                $errorAmount++;
+            }
+
+            if (empty($email) || !validateEmail($email)) {
+                $f3 -> set('errors["email"]', 'Please enter a correct email');
+                $errorAmount++;
+            }
+
+            if (empty($phone) || !validatePhoneNumber($phone)) {
+                $f3 -> set('errors["phone"]', 'Please enter a correct phone number');
+                $errorAmount++;
+            }
+
+            if (empty($comment)) {
+                $f3 -> set('errors["comment"]', 'Please enter a comment');
+                $errorAmount++;
+            }
+
+            if ($errorAmount == 0) {
+                $f3->set('SESSION.email', $email);
+                $f3->set('SESSION.firstName', $firstName);
+                $f3->set('SESSION.lastName', $lastName);
+                $f3->set('SESSION.phone', $phone);
+                $f3->set('SESSION.comment', $comment);
+                $f3->reroute('contact-summary');
+            }
+
+
+
+        }
+
         $view = new Template();
         echo $view->render('views/contact.html');
     }
+
+
 
     /**
      * Display the user page.
@@ -293,26 +350,81 @@ class Controller
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $email = "";
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $f3 -> set('errors["email"]', 'Please enter a correct email');
+                $f3 -> set('errors["offers-email"]', 'Please enter a correct email');
+                $f3->reroute('#');
             } else {
                 $email = $_POST['email'];
                 $f3->set('email', $email);
 
                 $GLOBALS['dataLayer']->saveEmailToDatabase($email);
+                $view = new Template();
+                echo $view->render('views/offers.html');
                 session_destroy();
             }
         }
-
-        $view = new Template();
-        echo $view->render('views/offers.html');
     }
 
-    public function admin() {
+    public function admin($f3) {
+        if (!isset($_SESSION['user'])) {
+            $f3->reroute('login');
+        } else {
+            $emailData = $GLOBALS['dataLayer']->getEmails();
+            $f3->set('emailData', $emailData);
+            $view = new Template();
+            echo $view->render('views/admin.html');
+            // Unset the session when leaving the admin page
+            unset($_SESSION['user']);
+        }
+    }
+
+    public function login($f3) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            $user = $GLOBALS['dataLayer']->checkUserPass($username, $password);
+
+            if ($user !== null) {
+                $_SESSION['user'] = $user;
+                $f3->reroute('/admin');
+            } else {
+                $f3->set('errors["passusererror"]', 'Invalid username or password');
+            }
+        }
         $view = new Template();
-        echo $view->render('views/admin.html');
+        echo $view->render('views/login.html');
+    }
+
+    public function logout($f3) {
+        session_destroy();
+        $f3->reroute('/');
+    }
+
+    public function register($f3) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            // Hash the password
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            // Save user to the database
+            $success = $GLOBALS['dataLayer']->saveUser($username, $hashedPassword);
+
+            if ($success) {
+                // Redirect to login page or any other appropriate page
+                $f3->reroute('login');
+            } else {
+                // Handle error, e.g., username already exists
+                $f3->set('errors["registerError"]', 'Failed to register user. Please try again.');
+            }
+        }
+        $view = new Template();
+        echo $view->render('views/register.html');
     }
 
     public function contactSummary() {
+
         $view = new Template();
         echo $view->render('views/contact-summary.html');
     }

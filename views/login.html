@@ -1,9 +1,8 @@
 <!--
-    File: index.html
-    Author: Vlad, Blake, Tilak
-    Description: Main home page for the restaurant website.
+    File: login.html
+    Author: Blake, Vlad, Tilak
+    Description: login page
 -->
-
 
 <include href="views/header.html"></include>
 
@@ -47,39 +46,24 @@
     </div>
 </header>
 
-<!--main hero-->
-<main role="main" class="container d-flex flex-column align-items-center justify-content-center text-center ">
-    <h1>Thanks for contacting us!</h1>
-    <h3>We'll reach to you with a response as soon as possible to this email: {{@SESSION.email}}</h3>
-    <br>
-    <h4>Your information</h4>
-    <div class="d-flex flex-column contact-summary-user-info">
-        <div class="d-flex flex-row justify-content-between">
-            <p>First-name:</p>
-            <p>{{@SESSION.firstName}}</p>
-        </div>
-
-        <div class="d-flex flex-row justify-content-between">
-            <p>Last-name:</p>
-            <p> {{@SESSION.lastName}}</p>
-        </div>
-
-        <div class="d-flex flex-row justify-content-between">
-            <p>Phone:</p>
-            <p>{{@SESSION.phone}}</p>
-        </div>
-
-        <div class="d-flex flex-column justify-content-between comment">
-            <p>Comment:</p>
-            <p>{{@SESSION.comment}}</p>
-        </div>
+<!--main here-->
+<main role="main" class="container d-flex flex-column align-items-center justify-content-center">
+    <div class="main-login-container text-center d-flex flex-column">
+        <h1>Login</h1>
+        <form action="#" method="post" class="login-form d-flex flex-column">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+        <p>{{ @errors['passusererror'] }}</p>
     </div>
-    <check if="{{ isset(@errors['email']) }}">
-        <span class="err text-danger">{{ @errors['email'] }}</span>
-    </check>
 </main>
-
-<!--Footer of the page-->
 
 <include href="views/footer.html"></include>
 
@@ -87,4 +71,3 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
-

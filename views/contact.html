@@ -36,7 +36,7 @@
                             <div class="order-button d-flex align-items-center justify-content-center">
                                 <a class="nav-link" href="menu">Order</a>
                             </div>
-                            <a href="user"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
+                            <a href="admin"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
                             <a href="{{ @BASE }}/cart" class="cart-icon-container nav-link">
                                 <img src="images/iconmonstr-shopping-cart-22-240.png" alt="cart icon" class="cart-icon">
                             </a>
@@ -59,13 +59,16 @@
         <!-- Collect Information about customer-->
         <h4>Contact Information</h4>
 
-        <form action="contact-summary" method="post" class="form-horizontal">
+        <form action="#" method="post" class="form-horizontal">
 
             <!-- get first name -->
             <div class="form-group d-flex flex-column align-items-center justify-content-center">
                 <label for="firstName" class="col-4 control-label">First Name</label>
                 <div class="contact-input-size"><input class="form-control" type="text"
                                                        name="firstName" id="firstName" ></div>
+                <check if="{{ isset(@errors['email']) }}">
+                    <span class="err text-danger">{{ @errors['firstName'] }}</span>
+                </check>
             </div>
             <br>
 
@@ -74,6 +77,9 @@
                 <label for="lastName" class="col-4 control-label">Last Name</label>
                 <div class="contact-input-size"><input class="form-control" type="text"
                                                        name="lastName" id="lastName" ></div>
+                <check if="{{ isset(@errors['email']) }}">
+                    <span class="err text-danger">{{ @errors['lastName'] }}</span>
+                </check>
             </div>
             <br>
 
@@ -82,6 +88,9 @@
                 <label for="email" class="col-4 control-label">Email</label>
                 <div class="contact-input-size"><input class="form-control" type="text"
                                                        name="email" id="email" ></div>
+                <check if="{{ isset(@errors['email']) }}">
+                    <span class="err text-danger">{{ @errors['email'] }}</span>
+                </check>
             </div>
             <br>
 
@@ -90,6 +99,9 @@
                 <label for="phoneNumber" class="col-4 control-label">Phone</label>
                 <div class="contact-input-size"><input class="form-control" type="text"
                                                        name="phoneNumber" id="phoneNumber" ></div>
+                <check if="{{ isset(@errors['email']) }}">
+                    <span class="err text-danger">{{ @errors['phone'] }}</span>
+                </check>
             </div>
             <br>
 
@@ -98,9 +110,12 @@
             <!-- get comment -->
             <div class="form-group">
                 <label for="comment" class="col-4 control-label">Comment</label>
-                <div class="contact-input-size"><input class="form-control" type="text"
-                                                       name="comment" id="comment" ></div>
+                <div class="contact-input-size"><input class="form-control" type="text" name="comment" id="comment" ></div>
+                <check if="{{ isset(@errors['email']) }}">
+                    <span class="err text-danger">{{ @errors['comment'] }}</span>
+                </check>
             </div>
+
             <br>
 
             <!-- submit button -->

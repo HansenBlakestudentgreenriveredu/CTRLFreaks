@@ -18,8 +18,8 @@
                 <input type="text" name="email" id="email" placeholder="Email">
                 <button type="submit" class="offers-subscribe-button">Subscribe</button>
             </form>
-            <check if="{{ isset(@errors['email']) }}">
-                <span class="err text-danger">{{ @errors['email'] }}</span>
+            <check if="{{ isset(@errors['offers-email']) }}">
+                <span class="err text-danger">{{ @errors['offers-email'] }}</span>
             </check>
         </div>
 

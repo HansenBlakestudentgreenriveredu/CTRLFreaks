@@ -58,6 +58,39 @@ class DataLayer {
 
 
     }
+
+    function checkUserPass($username, $password) {
+        $sql = "SELECT * FROM `users` WHERE `username` = :username";
+        $statement = $this->dbh->prepare($sql);
+        $statement->bindParam(':username', $username);
+        $statement->execute();
+
+        $user =  $statement->fetch(PDO::FETCH_ASSOC);
+
+        // Check if user exists
+        if ($user) {
+            // Verify password
+            if (password_verify($password, $user['password'])) {
+                // Password is correct
+                return $user;
+            } else {
+                // Password is incorrect
+                return null;
+            }
+        } else {
+            // User not found
+            return null;
+        }
+    }
+
+    function saveUser($username, $password) {
+        $sql = "INSERT INTO `users` (`username`, `password`) VALUES (:username, :password)";
+        $statement = $this->dbh->prepare($sql);
+        $statement->bindParam(':username', $username);
+        $statement->bindParam(':password', $password);
+        return $statement->execute();
+    }
+
 }
 
 
