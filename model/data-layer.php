@@ -1,45 +1,55 @@
 <?php
 
-/* Data layer.
+// File: datalayer.php
+// Author: Vlad, Blake, Tilak
+// Description: datalayer file for the CTRLFreaks page
+
+/**
+ * Data layer.
  * It belongs to the model.
  */
-
 class DataLayer {
     private $_dbh;
 
     /**
-     * DataLayer constructor connects to PDO Database
+     * DataLayer constructor connects to the PDO Database.
      */
     function __construct() {
-        // Require my PDO data base connection credentials
+        // Require my PDO database connection credentials
         require_once $_SERVER['DOCUMENT_ROOT'].'/../config.php';
         try {
             // Instantiate our PDO database object
             $this->dbh = new PDO(DB_DSN, DB_USERNAME, DB_PASSWORD);
         } catch (PDOException $e) {
-            die ($e->getMessage());
+            die($e->getMessage());
         }
     }
 
     /**
-     * Save a restaurant order to the database
-     * @param Order an Order object
-     * @return int the Order ID
+     * Save an email to the database.
+     *
+     * @param string $email The email to save.
+     * @return void
      */
     function saveEmailToDatabase($email) {
         // Define query
         $sql = 'INSERT INTO subscribedEmail (email) VALUES (:email)';
 
-        // prepare the statement
+        // Prepare the statement
         $statement = $this->dbh->prepare($sql);
 
-        // Bind the
+        // Bind the email parameter
         $statement->bindParam(':email', $email);
 
         // Execute statement
         $statement->execute();
     }
 
+    /**
+     * Get all subscribed emails from the database.
+     *
+     * @return array The list of subscribed emails.
+     */
     function getEmails() {
         // Define the query
         $sql = "SELECT * FROM `subscribedEmail`";
@@ -47,28 +57,74 @@ class DataLayer {
         // Prepare the statement
         $statement = $this->dbh->prepare($sql);
 
-        // Bind the parameters (we don't need to for this)
+        // Execute the statement
+        $statement->execute();
+
+        // Fetch all results
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    /**
+     * Check if the username and password are correct.
+     *
+     * @param string $username The username to check.
+     * @param string $password The password to check.
+     * @return array|null The user data if the credentials are correct, null otherwise.
+     */
+    function checkUserPass($username, $password) {
+        // Define the query
+        $sql = "SELECT * FROM `users` WHERE `username` = :username";
+
+        // Prepare the statement
+        $statement = $this->dbh->prepare($sql);
+
+        // Bind the username parameter
+        $statement->bindParam(':username', $username);
 
         // Execute the statement
         $statement->execute();
 
-        // Process the results
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
+        // Fetch the user data
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
 
+        // Check if user exists and verify password
+        if ($user && password_verify($password, $user['password'])) {
+            return $user;
+        } else {
+            return null;
+        }
+    }
 
+    /**
+     * Save a new user to the database.
+     *
+     * @param string $username The username of the new user.
+     * @param string $password The password of the new user.
+     * @return bool True on success, false otherwise.
+     */
+    function saveUser($username, $password) {
+        // Define the query
+        $sql = "INSERT INTO `users` (`username`, `password`) VALUES (:username, :password)";
+
+        // Prepare the statement
+        $statement = $this->dbh->prepare($sql);
+
+        // Bind the username and password parameters
+        $statement->bindParam(':username', $username);
+        $statement->bindParam(':password', $password);
+
+        // Execute the statement
+        return $statement->execute();
     }
 }
-
-
 
 /**
  * Get breakfast items.
  *
- * @return array
+ * @return array The list of breakfast items.
  */
-function getBreakfastItems()
-{
+function getBreakfastItems() {
     return [
         [
             'itemId' => 1,
@@ -97,10 +153,9 @@ function getBreakfastItems()
 /**
  * Get lunch items.
  *
- * @return array
+ * @return array The list of lunch items.
  */
-function getLunchItems()
-{
+function getLunchItems() {
     return [
         [
             'itemId' => 4,
@@ -129,10 +184,9 @@ function getLunchItems()
 /**
  * Get dinner items.
  *
- * @return array
+ * @return array The list of dinner items.
  */
-function getDinnerItems()
-{
+function getDinnerItems() {
     return [
         [
             'itemId' => 7,
@@ -161,10 +215,9 @@ function getDinnerItems()
 /**
  * Get side items.
  *
- * @return array
+ * @return array The list of side items.
  */
-function getSides()
-{
+function getSides() {
     return [
         [
             'itemId' => 10,
@@ -193,10 +246,9 @@ function getSides()
 /**
  * Get beverages.
  *
- * @return array
+ * @return array The list of beverages.
  */
-function getBeverages()
-{
+function getBeverages() {
     return [
         [
             'itemId' => 13,
@@ -225,10 +277,9 @@ function getBeverages()
 /**
  * Get discount promo codes and their corresponding discount percentages.
  *
- * @return array
+ * @return array The list of discount codes with their discount percentages.
  */
-function getDiscountCodes()
-{
+function getDiscountCodes() {
     return [
         'SUMMER20' => 20,  // 20% discount for SUMMER20 code
         'SAVE10' => 10,    // 10% discount for SAVE10 code

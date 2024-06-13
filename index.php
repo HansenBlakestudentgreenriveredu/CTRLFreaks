@@ -1,5 +1,9 @@
 <?php
 
+// File: index.php
+// Author: Vlad, Blake, Tilak
+// Description: index.php file for the CTRL freaks page
+
 // Turn on error reporting
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);

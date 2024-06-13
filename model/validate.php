@@ -1,5 +1,9 @@
 <?php
 
+// File: validate.php
+// Author: Vlad, Blake, Tilak
+// Description: validation php file that includes all validation methods for the CTRLFreaks page
+
 /**
  * Validate data.
  * This file contains functions for validating and sanitizing input data.
@@ -13,7 +17,7 @@
  */
 function validMeals($meals)
 {
-    return strlen(trim($meals)) >= 3 && validMealss($meals);
+    return strlen(trim($meals)) >= 3 && validMealsInternal($meals);
 }
 
 /**
@@ -22,7 +26,7 @@ function validMeals($meals)
  * @param string $meals The meals to validate.
  * @return bool True if meals is valid, false otherwise.
  */
-function validMealss($meals)
+function validMealsInternal($meals)
 {
     return in_array($meals, getMeals());
 }
@@ -35,7 +39,7 @@ function validMealss($meals)
  */
 function validSides($sides)
 {
-    return strlen(trim($sides)) >= 3 && validSidess($sides);
+    return strlen(trim($sides)) >= 3 && validSidesInternal($sides);
 }
 
 /**
@@ -44,7 +48,7 @@ function validSides($sides)
  * @param string $sides The sides to validate.
  * @return bool True if sides is valid, false otherwise.
  */
-function validSidess($sides)
+function validSidesInternal($sides)
 {
     return in_array($sides, getSides());
 }
@@ -57,7 +61,7 @@ function validSidess($sides)
  */
 function validDrinks($drinks)
 {
-    return strlen(trim($drinks)) >= 3 && validDrinkss($drinks);
+    return strlen(trim($drinks)) >= 3 && validDrinksInternal($drinks);
 }
 
 /**
@@ -66,7 +70,7 @@ function validDrinks($drinks)
  * @param string $drinks The drinks to validate.
  * @return bool True if drinks is valid, false otherwise.
  */
-function validDrinkss($drinks)
+function validDrinksInternal($drinks)
 {
     return in_array($drinks, getDrinks());
 }
@@ -137,8 +141,8 @@ function getErrorMessage($field, $message)
 /**
  * Validate discount promo code.
  *
- * @param string $code Promo code to validate
- * @return bool True if valid, false otherwise
+ * @param string $code Promo code to validate.
+ * @return bool True if valid, false otherwise.
  */
 function validDiscountCode($code)
 {
@@ -146,12 +150,22 @@ function validDiscountCode($code)
     return array_key_exists($code, $discountCodes);
 }
 
-// Function to validate email
+/**
+ * Validate email.
+ *
+ * @param string $email The email to validate.
+ * @return bool True if the email is valid, false otherwise.
+ */
 function validateEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
-// Function to validate phone number
+/**
+ * Validate phone number.
+ *
+ * @param string $phone The phone number to validate.
+ * @return bool True if the phone number is valid, false otherwise.
+ */
 function validatePhoneNumber($phone) {
     // Basic validation: must contain only digits and optional plus sign, spaces, dashes
     return preg_match('/^\+?[\d\s\-]+$/', $phone);

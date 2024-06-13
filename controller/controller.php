@@ -1,12 +1,15 @@
 <?php
 
+// Controller.php
+// Vlad O, Blake H, Tilak
+// Controller page for the CTRLFreaks page
+
 require_once 'model/data-layer.php';
 require_once 'model/validate.php';
 require_once 'classes/pricing.php';
 require_once 'classes/lookupItems.php';
 
-// Define constants
-
+// Define constants if necessary
 
 /**
  * Class Controller
@@ -38,7 +41,6 @@ class Controller
      */
     public function home()
     {
-
         $view = new Template();
         echo $view->render('views/index.html');
     }
@@ -54,6 +56,7 @@ class Controller
         // Pass the cart count to the view
         $this->_f3->set('cartCount', $cartCount);
 
+        // Set menu items from data layer
         $this->_f3->set('menuItems.breakfast', getBreakfastItems());
         $this->_f3->set('menuItems.lunch', getLunchItems());
         $this->_f3->set('menuItems.dinner', getDinnerItems());
@@ -75,7 +78,7 @@ class Controller
     }
 
     /**
-     * Display the contact page.
+     * Display the contact page and handle contact form submissions.
      */
     public function contact($f3)
     {
@@ -83,62 +86,53 @@ class Controller
             $errorAmount = 0;
 
             // Sanitize and validate form inputs
-            $firstName = $_POST['firstName'];
-            $lastName = $_POST['firstName'];
-            $email = $_POST['email'];
-            $phone = $_POST['phoneNumber'];
-            $comment = $_POST['comment'];
-
             $firstName = sanitizeInput($_POST['firstName']);
             $lastName = sanitizeInput($_POST['lastName']);
             $email = sanitizeInput($_POST['email']);
             $phone = sanitizeInput($_POST['phoneNumber']);
-            $message = sanitizeInput($_POST['comment']);
+            $comment = sanitizeInput($_POST['comment']);
 
-
+            // Validate inputs
             if (empty($firstName)) {
-                $f3 -> set('errors["firstName"]', 'Please enter a correct first name');
+                $f3->set('errors["firstName"]', 'Please enter a correct first name');
                 $errorAmount++;
             }
 
             if (empty($lastName)) {
-                $f3 -> set('errors["lastName"]', 'Please enter a correct last name');
+                $f3->set('errors["lastName"]', 'Please enter a correct last name');
                 $errorAmount++;
             }
 
             if (empty($email) || !validateEmail($email)) {
-                $f3 -> set('errors["email"]', 'Please enter a correct email');
+                $f3->set('errors["email"]', 'Please enter a correct email');
                 $errorAmount++;
             }
 
             if (empty($phone) || !validatePhoneNumber($phone)) {
-                $f3 -> set('errors["phone"]', 'Please enter a correct phone number');
+                $f3->set('errors["phone"]', 'Please enter a correct phone number');
                 $errorAmount++;
             }
 
             if (empty($comment)) {
-                $f3 -> set('errors["comment"]', 'Please enter a comment');
+                $f3->set('errors["comment"]', 'Please enter a comment');
                 $errorAmount++;
             }
 
+            // If no errors, store inputs in session and redirect to contact summary
             if ($errorAmount == 0) {
-                $f3->set('SESSION.email', $email);
-                $f3->set('SESSION.firstName', $firstName);
-                $f3->set('SESSION.lastName', $lastName);
-                $f3->set('SESSION.phone', $phone);
-                $f3->set('SESSION.comment', $comment);
+                $_SESSION['email'] = $email;
+                $_SESSION['firstName'] = $firstName;
+                $_SESSION['lastName'] = $lastName;
+                $_SESSION['phone'] = $phone;
+                $_SESSION['comment'] = $comment;
                 $f3->reroute('contact-summary');
             }
-
-
-
         }
 
+        // Render the contact view
         $view = new Template();
         echo $view->render('views/contact.html');
     }
-
-
 
     /**
      * Display the user page.
@@ -239,8 +233,7 @@ class Controller
         // Validate the discount code
         if (!validDiscountCode($discountCode)) {
             // Handle invalid discount code
-            // You can redirect back to the cart page with an error message
-            // For simplicity, I'm just redirecting back to the cart page here
+            // Redirect back to the cart page with an error message
             $f3->reroute('/cart');
             return;
         }
@@ -249,7 +242,7 @@ class Controller
         $discountPercentage = getDiscountCodes()[$discountCode];
 
         // Retrieve cart items from session
-        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
+        $cartItems = $_SESSION['cartItem'] ?? [];
 
         // Calculate subtotal, tax, and total
         $subtotal = calculateSubtotal($cartItems);
@@ -278,7 +271,7 @@ class Controller
         unset($_SESSION['discountApplied']);
 
         // Retrieve cart items from session
-        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
+        $cartItems = $_SESSION['cartItem'] ?? [];
 
         // Calculate subtotal, tax, and total without discount
         $subtotal = calculateSubtotal($cartItems);
@@ -298,16 +291,13 @@ class Controller
         $f3->reroute('/cart');
     }
 
-
-
-
     /**
      * Display the cart page.
      */
     public function cart()
     {
         // Retrieve cart items from session
-        $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
+        $cartItems = $_SESSION['cartItem'] ?? [];
 
         // Calculate subtotal, tax, and total
         $subtotal = calculateSubtotal($cartItems);
@@ -315,7 +305,7 @@ class Controller
         $total = round($subtotal + $tax, 2);
 
         // Check if a discount has been applied
-        $discountApplied = isset($_SESSION['discountApplied']) ? $_SESSION['discountApplied'] : false;
+        $discountApplied = $_SESSION['discountApplied'] ?? false;
 
         // If a discount has been applied, calculate the discount and update the total
         if ($discountApplied) {
@@ -345,12 +335,14 @@ class Controller
         echo $view->render('views/cart.html');
     }
 
+    /**
+     * Display the offers page and handle offer submissions.
+     */
     public function offers($f3)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $email = "";
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $f3 -> set('errors["offers-email"]', 'Please enter a correct email');
+                $f3->set('errors["offers-email"]', 'Please enter a correct email');
                 $f3->reroute('#');
             } else {
                 $email = $_POST['email'];
@@ -364,7 +356,11 @@ class Controller
         }
     }
 
-    public function admin($f3) {
+    /**
+     * Display the admin page if the user is authenticated.
+     */
+    public function admin($f3)
+    {
         if (!isset($_SESSION['user'])) {
             $f3->reroute('login');
         } else {
@@ -377,7 +373,11 @@ class Controller
         }
     }
 
-    public function login($f3) {
+    /**
+     * Handle user login.
+     */
+    public function login($f3)
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -395,12 +395,20 @@ class Controller
         echo $view->render('views/login.html');
     }
 
-    public function logout($f3) {
+    /**
+     * Handle user logout.
+     */
+    public function logout($f3)
+    {
         session_destroy();
         $f3->reroute('/');
     }
 
-    public function register($f3) {
+    /**
+     * Handle user registration.
+     */
+    public function register($f3)
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -423,9 +431,13 @@ class Controller
         echo $view->render('views/register.html');
     }
 
-    public function contactSummary() {
-
+    /**
+     * Display the contact summary page.
+     */
+    public function contactSummary()
+    {
         $view = new Template();
         echo $view->render('views/contact-summary.html');
     }
 }
+?>

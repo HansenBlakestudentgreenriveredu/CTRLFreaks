@@ -19,6 +19,9 @@ header {
 .index {
     height: 100vh;
     background-image: url("../images/pexels-polina-tankilevitch-4109136.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: rgba(255, 255, 255, 0.7);
     background-blend-mode: lighten;
 }
@@ -88,25 +91,29 @@ footer {
     width: 30px;
 }
 
+/* Styles for the menu body */
 .menubody {
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
 
+/* Styles for the menu container */
 .menu-container {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Remove '!important' */
+    width: 100%;
 }
 
+/* Styles for the menu title */
 .menu-title {
     margin-top: 20px;
     margin-bottom: 40px;
     text-align: center;
 }
 
+/* Styles for the category title */
 .category-title {
     text-align: center;
     margin-bottom: 20px;
@@ -114,19 +121,22 @@ footer {
     font-weight: bold;
 }
 
+/* Accent color for text */
 .accent-color {
-    color: #007bff; /* Blue accent color */
+    color: #007bff;
 }
 
+/* Styles for the menu item */
 .menu-item {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     margin: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the menu items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for the menu item image */
 .menu-item-img {
     width: 100%;
     height: 100%;
@@ -134,26 +144,31 @@ footer {
     border-radius: 5px;
 }
 
+/* Styles for the menu title */
 .menu-title {
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
-    font-size: 2.5em; /* Increase font size */
-    color: #333; /* Dark color for consistency */
-    text-transform: uppercase; /* Uppercase for a professional look */
-    font-weight: bold; /* Bold font weight */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+    font-size: 2.5em;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Styles for the menu item title */
 .menu-item-title {
     margin-top: 10px;
     font-size: 1.5em;
 }
 
+/* Styles for the menu item description */
 .menu-item-description {
     color: #6c757d;
     font-size: 16px;
 }
 
+/* Styles for the menu item price */
 .menu-item-price {
     font-size: 1.2em;
     color: #28a745;
@@ -161,26 +176,30 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Styles for the menu category */
 .menu-category {
-    margin-bottom: 40px; /* Adds space between sections */
+    margin-bottom: 40px;
 }
 
+/* Styles for the category title */
 .category-title {
     padding: 20px 0;
     margin-bottom: 20px;
     background-color: #f8f9fa;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the section titles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+/* Additional styles for the menu item */
 .menu-item {
-    margin-bottom: 20px; /* Add spacing between menu items */
+    margin-bottom: 20px;
 }
 
+/* Styles for the row */
 .row {
-    margin-left: -10px; /* Adjust margin to fix alignment issues caused by padding */
-    margin-right: -10px; /* Adjust margin to fix alignment issues caused by padding */
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 /* Adjust spacing between columns */
@@ -189,36 +208,41 @@ footer {
     padding-right: 10px;
 }
 
-/* Add borders and underlines to menu items */
+/* Additional styles for the menu item */
 .menu-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
-    position: relative; /* Add position relative for pseudo-element */
+    position: relative;
 }
 
+/* Pseudo-element for menu item */
 .menu-item:after {
     content: '';
     position: absolute;
-    bottom: -1px; /* Adjust position to place under the menu item */
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #ccc; /* Add underline effect */
+    background-color: #ccc;
 }
 
+/* Styles for anchor links */
 .anchorlinks {
     text-align: center;
 }
 
+/* Styles for the navigation */
 .nav {
     text-align: center;
 }
 
+/* Styles for the user info container */
 .user-info-container {
     grid-gap: 60px;
 }
 
+/* Styles for the main user container */
 .main-user-container {
     background-color: rgb(246, 247, 248);
     border-radius: 5px;
@@ -227,6 +251,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Styles for the user info description */
 .user-info-desc {
     display: flex;
     flex-direction: column;
@@ -234,21 +259,25 @@ footer {
     justify-content: end;
 }
 
+/* Styles for the user container images */
 .main-user-container img {
     width: 100px;
     margin-bottom: 30px;
 }
 
+/* Styles for the user image container */
 .user-image-container {
     margin: 20px;
 }
 
+/* Styles for the buttons in the main user container */
 .main-user-container button {
     background-color: orange;
     border-radius: 5px;
     border: none;
 }
 
+/* Styles for the notification switch */
 .notification-switch {
     height: 30px;
     display: flex;
@@ -259,6 +288,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Styles for the active choice in the notification switch */
 .active-choice {
     border: 1px solid grey;
     border-radius: 5px;
@@ -267,15 +297,18 @@ footer {
     cursor: pointer;
 }
 
+/* Styles for the not active choice in the notification switch */
 .not-active {
     margin: 0;
     cursor: pointer;
 }
 
+/* Styles for the contact input size */
 .contact-input-size {
     width: 100%;
 }
 
+/* Styles for the main contact container */
 .main-contact-container {
     background-color: rgba(248, 249, 250);
     border-radius: 5px;
@@ -286,39 +319,46 @@ footer {
     max-width: 600px;
 }
 
+/* Styles for the contact submit button */
 .contact-submit-button {
     background-color: rgba(255, 165, 0);
     color: black;
     border: none;
     font-weight: bold;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
 }
 
+/* Styles for the user container */
 .user-container {
     max-width: 600px;
 }
 
+/* Styles for the save user button */
 .save-user-button {
     width: 100px;
     align-self: center;
     margin-top: 20px;
 }
 
+/* Styles for the cart container */
 .cart-container {
     height: 100%;
 }
 
+/* Styles for the main cart container */
 .main-cart-container {
     background-color: rgb(246, 247, 248);
     height: 100%;
 }
 
+/* Styles for the checkout container */
 .checkout-container {
     border: 1px;
 }
 
-
-/*Add to cart page styling*/
-
+/* Add to cart page styling */
 body.add-to-cart-body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -328,6 +368,7 @@ body.add-to-cart-body {
     height: 100vh;
 }
 
+/* Styles for the cart container */
 .cart-container {
     text-align: center;
     background: white;
@@ -336,19 +377,23 @@ body.add-to-cart-body {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
+/* Styles for the cart container heading */
 .cart-container h1 {
     margin-bottom: 20px;
     color: #343a40;
 }
 
+/* Styles for the cart container paragraph */
 .cart-container p {
     margin: 20px 0;
 }
 
+/* Styles for the cart container anchor tags */
 .cart-container a {
     text-decoration: none;
 }
 
+/* Styles for the cart container buttons */
 .cart-container .btn {
     margin: 5px;
     padding: 10px 20px;
@@ -356,52 +401,141 @@ body.add-to-cart-body {
     transition: background-color 0.3s;
 }
 
+/* Styles for the cart container menu button */
 .cart-container .btn-menu {
     background-color: #007bff;
     color: white;
 }
 
+/* Styles for the cart container cart button */
 .cart-container .btn-cart {
     background-color: #28a745;
     color: white;
 }
 
+/* Hover effects for the cart container menu button */
 .cart-container .btn-menu:hover {
     background-color: #0056b3;
 }
 
+/* Hover effects for the cart container cart button */
 .cart-container .btn-cart:hover {
     background-color: #218838;
 }
 
-.table-container {
-    height: 50%;
-    overflow: auto;
-}
-
-.main-admin-container {
-    height: 100%;
-}
-
-
+/* Styles for the cart icon container */
 .cart-icon-container {
     display: flex;
     align-items: center;
-    color: #6c757d; /* Default Bootstrap text color for navbar */
+    color: #6c757d;
     text-decoration: none;
 }
 
+/* Styles for the cart icon */
 .cart-icon {
     width: 24px;
     height: 24px;
     margin-right: 5px;
 }
 
+/* Styles for the cart item count */
 .cart-item-count {
-    background-color: #ffeb3b; /* Yellow color */
-    color: #000; /* Black text */
+    background-color: #ffeb3b;
+    color: #000;
     font-weight: bold;
     padding: 0.5em 0.75em;
     border-radius: 50px;
     font-size: 0.9rem;
+}
+
+/* Styles for the table container */
+.table-container {
+    height: 50%;
+    overflow: auto;
+    margin-bottom: 50px;
+    border-bottom: 1px solid grey;
+}
+
+/* Styles for the main admin container */
+.main-admin-container {
+    height: 100%;
+}
+
+/* Styles for the contact summary user info */
+.contact-summary-user-info {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the main admin container */
+.main-admin-container {
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the main login container */
+.main-login-container {
+    width: 300px;
+    height: 320px;
+    padding: 20px;
+    background-color: rgb(246, 247, 248);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the login form */
+.login-form {
+    grid-gap: 20px;
+}
+
+/* Styles for the comment */
+.comment {
+    overflow: auto;
+}
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0,0,0,0);
+    -webkit-border-radius: 100px;
+}
+
+/* Hover effect for both scrollbar area and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' - that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+    background: rgba(0,0,0,0.5);
+    -webkit-border-radius: 100px;
+}
+
+/* Active state for the scrollbar 'thumb' */
+::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(0,0,0,0.61);
+    -webkit-border-radius: 100px;
+}
+
+/* Styles for the send email button */
+.send-email-button {
+    background-color: rgba(255, 165, 0);
+    color: black;
+    border: none;
+    font-weight: bold;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* Hover effect for the send email button */
+.send-email-button:hover {
+    background-color: rgb(218, 142, 0);
 }

@@ -1,13 +1,14 @@
-/*Vlad O, Tilak C, Blake H*/
-/*Javascript script file for the CTRLFreaks webpage*/
-// File: script.js
+/*
+ * Vlad O, Tilak C, Blake H
+ * JavaScript script file for the CTRLFreaks webpage
+ * File: script.js
+ */
 
-
-// Get the button
+// Get the "Go to Top" button element
 var goToTopBtn = document.getElementById("goToTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// Show the "Go to Top" button when the user scrolls down 20px from the top of the document
+window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -17,22 +18,25 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+// Scroll to the top of the document when the "Go to Top" button is clicked
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
+// Get the elements for active and non-active user notification status
 let activeUserNotificationStatus = document.querySelector('.active-choice');
 let nonActiveStatus = document.querySelector(".not-active");
 
 console.log(nonActiveStatus);
 console.log(activeUserNotificationStatus);
 
+// Add event listener to non-active status element to handle the user confirmation
 nonActiveStatus.addEventListener("mousedown", function() {
-    confirm("Are you sure you want to change your notification status?");
-    nonActiveStatus.className = "active-choice";
-    activeUserNotificationStatus.className = "not-active";
+    if (confirm("Are you sure you want to change your notification status?")) {
+        nonActiveStatus.className = "active-choice";
+        activeUserNotificationStatus.className = "not-active";
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
