@@ -1277,3 +1277,5 @@ Stack trace:
 [13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
 [13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
 [13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[13-Jun-2024 04:17:14 UTC] HTTP 404 (GET /chrome.css.map)
+[13-Jun-2024 04:17:14 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:125] Base->run()

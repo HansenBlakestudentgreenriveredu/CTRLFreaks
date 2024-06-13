@@ -49,7 +49,7 @@
                             <div class="order-button d-flex align-items-center justify-content-center">
                                 <a class="nav-link" href="menu">Order</a>
                             </div>
-                            <a href="admin"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
+                            <a href="user"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
                             <a href="{{ @BASE }}/cart" class="cart-icon-container">
                                 <img src="images/iconmonstr-shopping-cart-22-240.png" alt="cart icon" class="cart-icon">
                                 <span class="cart-item-count">Items: {{ @cartCount }}</span>
@@ -77,8 +77,8 @@
 
         <!-- Breakfast Items -->
         <div class="menu-category">
-            <h2 id="breakfast" class="category-title accent-color">Breakfast</h2>
-            <div class="row">
+            <h2 id="breakfast" class="category-title accent-color text-center">Breakfast</h2>
+            <div class="row justify-content-center">
                 <repeat group="{{ @menuItems.breakfast }}" value="{{ @item }}">
                     <div class="col-md-4">
                         <div class="menu-item">
@@ -99,8 +99,8 @@
 
         <!-- Lunch Items -->
         <div class="menu-category">
-            <h2 id="lunch" class="category-title accent-color">Lunch</h2>
-            <div class="row">
+            <h2 id="lunch" class="category-title accent-color text-center">Lunch</h2>
+            <div class="row justify-content-center">
                 <repeat group="{{ @menuItems.lunch }}" value="{{ @item }}">
                     <div class="col-md-4">
                         <div class="menu-item">
@@ -121,8 +121,8 @@
 
         <!-- Dinner Items -->
         <div class="menu-category">
-            <h2 id="dinner" class="category-title accent-color">Dinner</h2>
-            <div class="row">
+            <h2 id="dinner" class="category-title accent-color text-center">Dinner</h2>
+            <div class="row justify-content-center">
                 <repeat group="{{ @menuItems.dinner }}" value="{{ @item }}">
                     <div class="col-md-4">
                         <div class="menu-item">
@@ -143,8 +143,8 @@
 
         <!-- Sides Items -->
         <div class="menu-category">
-            <h2 id="sides" class="category-title accent-color">Sides</h2>
-            <div class="row">
+            <h2 id="sides" class="category-title accent-color text-center">Sides</h2>
+            <div class="row justify-content-center">
                 <repeat group="{{ @menuItems.sides }}" value="{{ @item }}">
                     <div class="col-md-4">
                         <div class="menu-item">
@@ -165,8 +165,8 @@
 
         <!-- Beverages Items -->
         <div class="menu-category">
-            <h2 id="beverages" class="category-title accent-color">Beverages</h2>
-            <div class="row">
+            <h2 id="beverages" class="category-title accent-color text-center">Beverages</h2>
+            <div class="row justify-content-center">
                 <repeat group="{{ @menuItems.beverages }}" value="{{ @item }}">
                     <div class="col-md-4">
                         <div class="menu-item">
