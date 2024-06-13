@@ -80,9 +80,8 @@ class Controller
     /**
      * Display the contact page and handle contact form submissions.
      */
-    public function contact()
+    public function contact($f3)
     {
-<<<<<<< HEAD
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $errorAmount = 0;
 
@@ -131,8 +130,6 @@ class Controller
         }
 
         // Render the contact view
-=======
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
         echo $view->render('views/contact.html');
     }
@@ -170,7 +167,7 @@ class Controller
     /**
      * Clear the cart.
      *
-     * @param \Base $f3 Fat-Free Framework instance
+     * @param ase $f3 Fat-Free Framework instance
      */
     public function clearCart($f3)
     {
@@ -237,13 +234,10 @@ class Controller
 
         // Validate the discount code
         if (!validDiscountCode($discountCode)) {
-<<<<<<< HEAD
             // Handle invalid discount code
             // Redirect back to the cart page with an error message
-=======
             // Handle incorrect discount code
             $this->_f3->set('discountError', 'Invalid discount code.');
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
             $f3->reroute('/cart');
             return;
 
@@ -362,28 +356,26 @@ class Controller
     public function offers($f3)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $email = "";
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-<<<<<<< HEAD
-                $f3->set('errors["offers-email"]', 'Please enter a correct email');
+                $f3 -> set('errors["offers-email"]', 'Please enter a correct email');
                 $f3->reroute('#');
-=======
-                $f3 -> set('errors["email"]', 'Please enter a correct email');
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
             } else {
                 $email = $_POST['email'];
                 $f3->set('email', $email);
 
                 $GLOBALS['dataLayer']->saveEmailToDatabase($email);
+                $view = new Template();
+                echo $view->render('views/offers.html');
                 session_destroy();
             }
         }
+    }
 
-<<<<<<< HEAD
     /**
      * Display the admin page if the user is authenticated.
      */
-    public function admin($f3)
-    {
+    public function admin($f3) {
         if (!isset($_SESSION['user'])) {
             $f3->reroute('login');
         } else {
@@ -399,8 +391,7 @@ class Controller
     /**
      * Handle user login.
      */
-    public function login($f3)
-    {
+    public function login($f3) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -414,13 +405,11 @@ class Controller
                 $f3->set('errors["passusererror"]', 'Invalid username or password');
             }
         }
-=======
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
-        echo $view->render('views/offers.html');
+        echo $view->render('views/login.html');
     }
 
-<<<<<<< HEAD
+
     /**
      * Handle user logout.
      */
@@ -453,22 +442,15 @@ class Controller
                 $f3->set('errors["registerError"]', 'Failed to register user. Please try again.');
             }
         }
-=======
-    public function admin() {
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
-        $view = new Template();
-        echo $view->render('views/admin.html');
     }
 
-<<<<<<< HEAD
+
     /**
      * Display the contact summary page.
      */
     public function contactSummary()
     {
-=======
-    public function contactSummary() {
->>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
+
         $view = new Template();
         echo $view->render('views/contact-summary.html');
     }
