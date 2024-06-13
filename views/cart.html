@@ -32,7 +32,7 @@
                             <div class="order-button d-flex align-items-center justify-content-center">
                                 <a class="nav-link" href="menu">Order</a>
                             </div>
-                            <a href="admin"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
+                            <a href="user"><img src="images/iconmonstr-user-19-240.png" alt="user icon"></a>
                             <a href="cart"><img src="images/iconmonstr-shopping-cart-22-240.png" alt="cart icon"></a>
                         </div>
                     </div>
@@ -87,10 +87,16 @@
                     <input type="text" id="discount" name="discount" class="form-control" placeholder="Enter promo code">
                     <button type="submit" class="btn btn-primary">Apply</button>
                 </div>
+                <!-- Display discount error message -->
+                <check if="{{ isset(@discountError) && @discountError }}">
+                    <p class="text-danger">{{ @discountError }}</p>
+                </check>
             </form>
             <!-- Discount Applied Message -->
             <check if="{{ isset(@discountApplied) && @discountApplied }}">
-                <p class="text-success">Discount applied successfully!</p>
+                <div class="discount-applied">
+                    <p>Discount Applied: {{ @discountCode }} ({{ @discountPercentage }}% off)</p>
+                </div>
             </check>
         </div>
         <!-- Total Cost Details -->
@@ -126,11 +132,12 @@
             <hr>
 
             <!-- Total with Discount -->
-            <div class="d-flex justify-content-between">
-                <h5 class="fw-bold">TOTAL (After Discount):</h5>
-                <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
-            </div>
-        </div>
+            <check if="{{ isset(@discountApplied) && @discountApplied }}">
+                <div class="d-flex justify-content-between">
+                    <h5 class="fw-bold">TOTAL (After Discount):</h5>
+                    <h5 class="text-success fw-bold">${{ @totalAfterDiscount }}</h5>
+                </div>
+            </check>
         <!-- Checkout Button -->
         <div class="check-out-button mt-3 w-100 text-center">
             <button type="submit" class="btn btn-success btn-lg btn-block">CHECKOUT</button>

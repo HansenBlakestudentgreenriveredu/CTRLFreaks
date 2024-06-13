@@ -77,68 +77,11 @@ class Controller
     /**
      * Display the contact page.
      */
-    public function contact($f3)
+    public function contact()
     {
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $errorAmount = 0;
-
-            // Sanitize and validate form inputs
-            $firstName = $_POST['firstName'];
-            $lastName = $_POST['firstName'];
-            $email = $_POST['email'];
-            $phone = $_POST['phoneNumber'];
-            $comment = $_POST['comment'];
-
-            $firstName = sanitizeInput($_POST['firstName']);
-            $lastName = sanitizeInput($_POST['lastName']);
-            $email = sanitizeInput($_POST['email']);
-            $phone = sanitizeInput($_POST['phoneNumber']);
-            $message = sanitizeInput($_POST['comment']);
-
-
-            if (empty($firstName)) {
-                $f3 -> set('errors["firstName"]', 'Please enter a correct first name');
-                $errorAmount++;
-            }
-
-            if (empty($lastName)) {
-                $f3 -> set('errors["lastName"]', 'Please enter a correct last name');
-                $errorAmount++;
-            }
-
-            if (empty($email) || !validateEmail($email)) {
-                $f3 -> set('errors["email"]', 'Please enter a correct email');
-                $errorAmount++;
-            }
-
-            if (empty($phone) || !validatePhoneNumber($phone)) {
-                $f3 -> set('errors["phone"]', 'Please enter a correct phone number');
-                $errorAmount++;
-            }
-
-            if (empty($comment)) {
-                $f3 -> set('errors["comment"]', 'Please enter a comment');
-                $errorAmount++;
-            }
-
-            if ($errorAmount == 0) {
-                $f3->set('SESSION.email', $email);
-                $f3->set('SESSION.firstName', $firstName);
-                $f3->set('SESSION.lastName', $lastName);
-                $f3->set('SESSION.phone', $phone);
-                $f3->set('SESSION.comment', $comment);
-                $f3->reroute('contact-summary');
-            }
-
-
-
-        }
-
         $view = new Template();
         echo $view->render('views/contact.html');
     }
-
-
 
     /**
      * Display the user page.
@@ -235,18 +178,22 @@ class Controller
     public function applyDiscount($f3)
     {
         $discountCode = $_POST['discount'] ?? '';
+        $_SESSION['discountCode'] = $discountCode;
+
 
         // Validate the discount code
         if (!validDiscountCode($discountCode)) {
-            // Handle invalid discount code
-            // You can redirect back to the cart page with an error message
-            // For simplicity, I'm just redirecting back to the cart page here
+            // Handle incorrect discount code
+            $this->_f3->set('discountError', 'Invalid discount code.');
             $f3->reroute('/cart');
             return;
+
         }
 
         // Get the discount percentage
         $discountPercentage = getDiscountCodes()[$discountCode];
+        $_SESSION['DISCOUNTPERCENTNUMBER'] = $discountPercentage;
+
 
         // Retrieve cart items from session
         $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
@@ -274,8 +221,10 @@ class Controller
      */
     public function removeDiscount($f3)
     {
-        // Remove discount flag from session
+        // Remove discount related session data
         unset($_SESSION['discountApplied']);
+        unset($_SESSION['discountCode']);
+        unset($_SESSION['discountPercentage']);
 
         // Retrieve cart items from session
         $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
@@ -306,6 +255,9 @@ class Controller
      */
     public function cart()
     {
+        $discountError = isset($_SESSION['discountError']) ? $_SESSION['discountError'] : '';
+        $discountCode = isset($_SESSION['discountCode']) ? $_SESSION['discountCode'] : '';
+        $discountPercentage = $_SESSION['DISCOUNTPERCENTNUMBER']; // Example discount percentage
         // Retrieve cart items from session
         $cartItems = isset($_SESSION['cartItem']) ? $_SESSION['cartItem'] : [];
 
@@ -320,7 +272,7 @@ class Controller
         // If a discount has been applied, calculate the discount and update the total
         if ($discountApplied) {
             // Calculate discount (e.g., 10% of subtotal)
-            $discountPercentage = 10; // Example discount percentage
+            $discountPercentage = $_SESSION['DISCOUNTPERCENTNUMBER']; // Example discount percentage
             $discount = ($subtotal * $discountPercentage) / 100;
 
             // Update total with discount
@@ -337,7 +289,10 @@ class Controller
         $this->_f3->set('tax', $tax);
         $this->_f3->set('total', $total);
         $this->_f3->set('discountApplied', $discountApplied);
+        $this->_f3->set('discountPercentage', $discountPercentage);
         $this->_f3->set('discount', $discount);
+        $this->_f3->set('discountCode', $discountCode);
+        $this->_f3->set('discountError', $discountError);
         $this->_f3->set('totalAfterDiscount', $totalAfterDiscount);
 
         // Render the cart view
@@ -350,81 +305,26 @@ class Controller
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $email = "";
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                $f3 -> set('errors["offers-email"]', 'Please enter a correct email');
-                $f3->reroute('#');
+                $f3 -> set('errors["email"]', 'Please enter a correct email');
             } else {
                 $email = $_POST['email'];
                 $f3->set('email', $email);
 
                 $GLOBALS['dataLayer']->saveEmailToDatabase($email);
-                $view = new Template();
-                echo $view->render('views/offers.html');
                 session_destroy();
             }
         }
-    }
 
-    public function admin($f3) {
-        if (!isset($_SESSION['user'])) {
-            $f3->reroute('login');
-        } else {
-            $emailData = $GLOBALS['dataLayer']->getEmails();
-            $f3->set('emailData', $emailData);
-            $view = new Template();
-            echo $view->render('views/admin.html');
-            // Unset the session when leaving the admin page
-            unset($_SESSION['user']);
-        }
-    }
-
-    public function login($f3) {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-
-            $user = $GLOBALS['dataLayer']->checkUserPass($username, $password);
-
-            if ($user !== null) {
-                $_SESSION['user'] = $user;
-                $f3->reroute('/admin');
-            } else {
-                $f3->set('errors["passusererror"]', 'Invalid username or password');
-            }
-        }
         $view = new Template();
-        echo $view->render('views/login.html');
+        echo $view->render('views/offers.html');
     }
 
-    public function logout($f3) {
-        session_destroy();
-        $f3->reroute('/');
-    }
-
-    public function register($f3) {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
-
-            // Hash the password
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            // Save user to the database
-            $success = $GLOBALS['dataLayer']->saveUser($username, $hashedPassword);
-
-            if ($success) {
-                // Redirect to login page or any other appropriate page
-                $f3->reroute('login');
-            } else {
-                // Handle error, e.g., username already exists
-                $f3->set('errors["registerError"]', 'Failed to register user. Please try again.');
-            }
-        }
+    public function admin() {
         $view = new Template();
-        echo $view->render('views/register.html');
+        echo $view->render('views/admin.html');
     }
 
     public function contactSummary() {
-
         $view = new Template();
         echo $view->render('views/contact-summary.html');
     }
