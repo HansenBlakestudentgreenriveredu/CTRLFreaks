@@ -7,7 +7,9 @@ maintainability. The project meets various requirements, ensuring robust functio
 
 # Project Requirements and How They Were Met
 
-Separates All Database/Business Logic Using the MVC Pattern 
+# ---------------
+
+# Separates All Database/Business Logic Using the MVC Pattern 
 
 The project adheres to the MVC (Model-View-Controller) pattern, ensuring a clear separation of concerns:
 
