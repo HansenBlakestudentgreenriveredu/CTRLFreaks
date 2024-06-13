@@ -281,13 +281,14 @@ function getBeverages() {
  */
 function getDiscountCodes() {
     return [
-        'SUMMER20' => 20,  // 20% discount for SUMMER20 code
+        'SDEV328' => 50, // 50% discount for SDEV328 Students
         'SAVE10' => 10,    // 10% discount for SAVE10 code
         'FREESHIP' => 0,   // Free shipping for FREESHIP code (0% discount)
         'FAMILY25' => 25,  // 25% discount for FAMILY25 code
         'HAPPYHOUR15' => 15,  // 15% discount for HAPPYHOUR15 code
         'WELCOME20' => 20, // 20% discount for WELCOME20 code
         'FALLSALE30' => 30, // 30% discount for FALLSALE30 code
+        'SUMMER20' => 20,  // 20% discount for SUMMER20 code
     ];
 }
 ?>

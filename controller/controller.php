@@ -80,8 +80,9 @@ class Controller
     /**
      * Display the contact page and handle contact form submissions.
      */
-    public function contact($f3)
+    public function contact()
     {
+<<<<<<< HEAD
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $errorAmount = 0;
 
@@ -130,6 +131,8 @@ class Controller
         }
 
         // Render the contact view
+=======
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
         echo $view->render('views/contact.html');
     }
@@ -229,17 +232,27 @@ class Controller
     public function applyDiscount($f3)
     {
         $discountCode = $_POST['discount'] ?? '';
+        $_SESSION['discountCode'] = $discountCode;
+
 
         // Validate the discount code
         if (!validDiscountCode($discountCode)) {
+<<<<<<< HEAD
             // Handle invalid discount code
             // Redirect back to the cart page with an error message
+=======
+            // Handle incorrect discount code
+            $this->_f3->set('discountError', 'Invalid discount code.');
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
             $f3->reroute('/cart');
             return;
+
         }
 
         // Get the discount percentage
         $discountPercentage = getDiscountCodes()[$discountCode];
+        $_SESSION['DISCOUNTPERCENTNUMBER'] = $discountPercentage;
+
 
         // Retrieve cart items from session
         $cartItems = $_SESSION['cartItem'] ?? [];
@@ -267,8 +280,10 @@ class Controller
      */
     public function removeDiscount($f3)
     {
-        // Remove discount flag from session
+        // Remove discount related session data
         unset($_SESSION['discountApplied']);
+        unset($_SESSION['discountCode']);
+        unset($_SESSION['discountPercentage']);
 
         // Retrieve cart items from session
         $cartItems = $_SESSION['cartItem'] ?? [];
@@ -296,6 +311,9 @@ class Controller
      */
     public function cart()
     {
+        $discountError = isset($_SESSION['discountError']) ? $_SESSION['discountError'] : '';
+        $discountCode = isset($_SESSION['discountCode']) ? $_SESSION['discountCode'] : '';
+        $discountPercentage = $_SESSION['DISCOUNTPERCENTNUMBER']; // Example discount percentage
         // Retrieve cart items from session
         $cartItems = $_SESSION['cartItem'] ?? [];
 
@@ -310,7 +328,7 @@ class Controller
         // If a discount has been applied, calculate the discount and update the total
         if ($discountApplied) {
             // Calculate discount (e.g., 10% of subtotal)
-            $discountPercentage = 10; // Example discount percentage
+            $discountPercentage = $_SESSION['DISCOUNTPERCENTNUMBER']; // Example discount percentage
             $discount = ($subtotal * $discountPercentage) / 100;
 
             // Update total with discount
@@ -327,7 +345,10 @@ class Controller
         $this->_f3->set('tax', $tax);
         $this->_f3->set('total', $total);
         $this->_f3->set('discountApplied', $discountApplied);
+        $this->_f3->set('discountPercentage', $discountPercentage);
         $this->_f3->set('discount', $discount);
+        $this->_f3->set('discountCode', $discountCode);
+        $this->_f3->set('discountError', $discountError);
         $this->_f3->set('totalAfterDiscount', $totalAfterDiscount);
 
         // Render the cart view
@@ -342,20 +363,22 @@ class Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+<<<<<<< HEAD
                 $f3->set('errors["offers-email"]', 'Please enter a correct email');
                 $f3->reroute('#');
+=======
+                $f3 -> set('errors["email"]', 'Please enter a correct email');
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
             } else {
                 $email = $_POST['email'];
                 $f3->set('email', $email);
 
                 $GLOBALS['dataLayer']->saveEmailToDatabase($email);
-                $view = new Template();
-                echo $view->render('views/offers.html');
                 session_destroy();
             }
         }
-    }
 
+<<<<<<< HEAD
     /**
      * Display the admin page if the user is authenticated.
      */
@@ -391,10 +414,13 @@ class Controller
                 $f3->set('errors["passusererror"]', 'Invalid username or password');
             }
         }
+=======
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
-        echo $view->render('views/login.html');
+        echo $view->render('views/offers.html');
     }
 
+<<<<<<< HEAD
     /**
      * Handle user logout.
      */
@@ -427,15 +453,22 @@ class Controller
                 $f3->set('errors["registerError"]', 'Failed to register user. Please try again.');
             }
         }
+=======
+    public function admin() {
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
-        echo $view->render('views/register.html');
+        echo $view->render('views/admin.html');
     }
 
+<<<<<<< HEAD
     /**
      * Display the contact summary page.
      */
     public function contactSummary()
     {
+=======
+    public function contactSummary() {
+>>>>>>> 79f071575d9213b3809ad68487cbc0fc6467ae15
         $view = new Template();
         echo $view->render('views/contact-summary.html');
     }
