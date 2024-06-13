@@ -1223,3 +1223,57 @@ Stack trace:
 [12-Jun-2024 05:19:20 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
 [12-Jun-2024 05:19:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
 [12-Jun-2024 05:19:20 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[12-Jun-2024 22:09:41 UTC] Undefined variable $cartCount
+[12-Jun-2024 22:09:41 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[12-Jun-2024 22:09:41 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[12-Jun-2024 22:09:41 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[12-Jun-2024 22:09:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[12-Jun-2024 22:09:41 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[12-Jun-2024 22:09:59 UTC] Undefined variable $cartCount
+[12-Jun-2024 22:09:59 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[12-Jun-2024 22:09:59 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[12-Jun-2024 22:09:59 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[12-Jun-2024 22:09:59 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[12-Jun-2024 22:09:59 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[12-Jun-2024 22:44:32 UTC] Undefined variable $cartCount
+[12-Jun-2024 22:44:32 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[12-Jun-2024 22:44:32 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[12-Jun-2024 22:44:32 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[12-Jun-2024 22:44:32 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[12-Jun-2024 22:44:32 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[12-Jun-2024 22:44:42 UTC] Undefined variable $cartCount
+[12-Jun-2024 22:44:42 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[12-Jun-2024 22:44:42 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[12-Jun-2024 22:44:42 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[12-Jun-2024 22:44:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[12-Jun-2024 22:44:42 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[12-Jun-2024 22:44:53 UTC] Undefined variable $cartCount
+[12-Jun-2024 22:44:53 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[12-Jun-2024 22:44:53 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[12-Jun-2024 22:44:53 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[12-Jun-2024 22:44:53 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[12-Jun-2024 22:44:53 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[13-Jun-2024 02:18:31 UTC] Undefined variable $cartCount
+[13-Jun-2024 02:18:31 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[13-Jun-2024 02:18:31 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[13-Jun-2024 02:18:31 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[13-Jun-2024 02:18:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[13-Jun-2024 02:18:31 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[13-Jun-2024 02:18:35 UTC] Undefined variable $cartCount
+[13-Jun-2024 02:18:35 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[13-Jun-2024 02:18:35 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[13-Jun-2024 02:18:35 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[13-Jun-2024 02:18:35 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[13-Jun-2024 02:18:35 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[13-Jun-2024 02:21:27 UTC] Undefined variable $cartCount
+[13-Jun-2024 02:21:27 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[13-Jun-2024 02:21:27 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[13-Jun-2024 02:21:27 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[13-Jun-2024 02:21:27 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[13-Jun-2024 02:21:27 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
+[13-Jun-2024 02:21:48 UTC] Undefined variable $cartCount
+[13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] 
+[13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/tmp/9qoo9vrwm0gx.3hp816x3l5ogg.php:42] Base->{closure}()
+[13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/controller/controller.php:83] Preview->render()
+[13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:45] Controller->contact()
+[13-Jun-2024 02:21:48 UTC] [GreenRiverDev/328/CTRLFreaks/index.php:132] Base->run()
